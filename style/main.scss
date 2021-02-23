@@ -1,0 +1,93 @@
+@import "variable";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: $deepblue;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+// 預設圓角按鈕
+.btn {
+    display: inline-block;
+    padding: 2px 35px;
+    border-radius: 20px;
+    background-color: $blue;
+    color: $deepblue;
+    cursor: pointer;
+    transition: 0.3s;
+    @include glow($blue-glow);
+    &:hover {
+        background-color: lighten($blue, 20);
+    }
+    &.active {
+        background-color: $pink;
+        color: #fff;
+        @include glow($pink-glow);
+        &:hover {
+            background-color: none !important;
+        }
+    }
+}
+
+// 方形按鈕
+.box-btn {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: $blue;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(black, 0.5);
+    i {
+        margin-left: 5px;
+    }
+}
+
+// 大標題字
+h1 {
+    color: #fff;
+    font-size: $font-h1;
+    font-weight: bold;
+    margin: 10px 0;
+    @include text-glow($pink-glow);
+}
+
+// 底部方框
+.frame {
+    padding: 35px;
+    .inner {
+        width: 100%;
+        height: 100%;
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 5px;
+        border-image-source: linear-gradient(to right, $pink, transparent, $blue);
+    }
+}
+
+// 藍色透明卡片
+.card {
+    border-radius: 8px;
+    display: inline-block;
+    background: linear-gradient(rgba($blue, 0.5), rgba($blue, 0.3));
+    color: $blue;
+    font-size: $font-p;
+    .title {
+        font-size: 1.875rem;
+        font-weight: 300;
+        margin: 0;
+        @include text-glow($blue-glow);
+    }
+    .hr {
+        width: 100%;
+        height: 2.2px;
+        background: linear-gradient(to right, $blue, transparent);
+        margin: 3px 0;
+    }
+}
