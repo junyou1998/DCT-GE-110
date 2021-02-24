@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-body {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
   font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
   background-color: #141432;
   margin: 0;
   padding: 0;
   font-weight: 500;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  outline: none;
 }
 
 .btn {
@@ -67,6 +67,7 @@ h1 {
 
 .frame {
   padding: 35px;
+  height: 100px;
 }
 
 .frame .inner {
@@ -75,7 +76,7 @@ h1 {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
-  border-image-source: linear-gradient(to right, #ED66A5, transparent, #76BFD0);
+  border-image-source: linear-gradient(to right, #ED66A5, transparent 33%, transparent 67%, #76BFD0);
 }
 
 .card {

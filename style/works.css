@@ -25,12 +25,24 @@ nav .btn {
   font-size: 18px;
 }
 
-.swiper-container {
+.gallery {
   width: 100%;
   height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gallery .swiper-container {
+  width: 80%;
+  height: 100%;
+  overflow: inherit;
 }
 
 .swiper-slide {
+  border-radius: 0.5px;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -47,6 +59,8 @@ nav .btn {
   transition: 0.5s;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+  -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0;
+          box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0;
 }
 
 .swiper-slide.swiper-slide-next, .swiper-slide.swiper-slide-prev {
@@ -57,6 +71,34 @@ nav .btn {
 .swiper-slide.swiper-slide-active {
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
+          box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
+}
+
+.swiper-button-next {
+  right: 70px;
+}
+
+.swiper-button-prev {
+  left: 70px;
+}
+
+.swiper-button-next:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0a9";
+  font-size: 65px;
+  color: #76BFD0;
+  text-shadow: 0 0 10px #76BFD0;
+}
+
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0a8";
+  font-size: 65px;
+  color: #ED66A5;
+  text-shadow: 0 0 10px #ED66A5;
 }
 
 .card {

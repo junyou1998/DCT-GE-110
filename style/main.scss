@@ -1,15 +1,16 @@
 @import "variable";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-body {
+* {
+    box-sizing: border-box;
+    outline: none;
     font-family: "Noto Sans TC", sans-serif;
+}
+body {
     background-color: $deepblue;
     margin: 0;
     padding: 0;
     font-weight: 500;
-    box-sizing: border-box;
-}
-* {
-    box-sizing: border-box;
+    outline: none;
 }
 
 // 預設圓角按鈕
@@ -61,13 +62,14 @@ h1 {
 // 底部方框
 .frame {
     padding: 35px;
+    height: 100px;
     .inner {
         width: 100%;
         height: 100%;
         border: 10px solid;
         border-image-slice: 1;
         border-width: 5px;
-        border-image-source: linear-gradient(to right, $pink, transparent, $blue);
+        border-image-source: linear-gradient(to right, $pink, transparent 33%,transparent 67%, $blue);
     }
 }
 
