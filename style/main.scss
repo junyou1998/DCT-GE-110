@@ -12,6 +12,21 @@ body {
     font-weight: 500;
     outline: none;
 }
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // padding: 25px 0;
+    .btn {
+        margin: 0 4px;
+    }
+}
+.container {
+    max-width: 1920px;
+    margin: auto;
+    position: relative;
+    padding: 25px 80px;
+}
 
 // 預設圓角按鈕
 .btn {
@@ -62,7 +77,12 @@ h1 {
 // 底部方框
 .frame {
     padding: 35px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
     .inner {
         width: 100%;
         height: 100%;
@@ -72,6 +92,7 @@ h1 {
         border-image-source: linear-gradient(to right, $pink, transparent 33%,transparent 67%, $blue);
     }
 }
+
 
 // 藍色透明卡片
 .card {

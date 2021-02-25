@@ -1,0 +1,24 @@
+h2 {
+  color: #fff;
+  text-shadow: 0 0 10px #EB337B;
+}
+
+h2 i {
+  color: #ED66A5;
+}
+
+h1 {
+  margin: 0;
+  text-shadow: 0 0 10px #58B9CC;
+}
+
+.inform {
+  color: #fff;
+  text-shadow: 0 0 10px #58B9CC;
+}
+
+.box-btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 191, 208, 0.5)), to(rgba(118, 191, 208, 0.3)));
+  background: linear-gradient(rgba(118, 191, 208, 0.5), rgba(118, 191, 208, 0.3));
+}
+/*# sourceMappingURL=index.css.map */

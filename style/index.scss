@@ -1,0 +1,23 @@
+@import "variable";
+h2{
+    color: #fff;
+    @include text-glow($pink-glow);
+    i{
+        color: $pink;
+        
+    }
+}
+h1{
+    margin: 0;
+    @include text-glow($blue-glow);
+}
+
+.inform{
+    color: #fff;
+    @include text-glow($blue-glow);
+    
+}
+
+.box-btn{
+    background: linear-gradient(rgba($blue, 0.5), rgba($blue, 0.3));
+}
