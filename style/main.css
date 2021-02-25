@@ -44,8 +44,9 @@ nav .btn {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-box-shadow: 0px 0px 15px #58B9CC;
-          box-shadow: 0px 0px 15px #58B9CC;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 0px 20px #58B9CC;
+          box-shadow: 0px 0px 20px #58B9CC;
 }
 
 .btn:hover {
@@ -55,8 +56,8 @@ nav .btn {
 .btn.active {
   background-color: #ED66A5;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 15px #EB337B;
-          box-shadow: 0px 0px 15px #EB337B;
+  -webkit-box-shadow: 0px 0px 20px #EB337B;
+          box-shadow: 0px 0px 20px #EB337B;
 }
 
 .btn.active:hover {
@@ -65,11 +66,12 @@ nav .btn {
 
 .box-btn {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 6px 15px;
   background-color: #76BFD0;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -83,7 +85,7 @@ h1 {
   font-size: 3.125rem;
   font-weight: bold;
   margin: 10px 0;
-  text-shadow: 0 0 10px #EB337B;
+  text-shadow: 0 0 20px #EB337B;
 }
 
 .frame {
@@ -94,6 +96,7 @@ h1 {
   z-index: -1;
   left: 0;
   top: 0;
+  pointer-events: none;
 }
 
 .frame .inner {
@@ -106,7 +109,7 @@ h1 {
 }
 
 .card {
-  border-radius: 8px;
+  border-radius: 5px;
   display: inline-block;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 191, 208, 0.5)), to(rgba(118, 191, 208, 0.3)));
   background: linear-gradient(rgba(118, 191, 208, 0.5), rgba(118, 191, 208, 0.3));
@@ -118,7 +121,7 @@ h1 {
   font-size: 1.875rem;
   font-weight: 300;
   margin: 0;
-  text-shadow: 0 0 10px #58B9CC;
+  text-shadow: 0 0 20px #58B9CC;
 }
 
 .card .hr {

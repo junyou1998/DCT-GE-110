@@ -16,7 +16,7 @@
 
 .tags {
   color: #ED66A5;
-  text-shadow: 0 0 10px #EB337B;
+  text-shadow: 0 0 20px #EB337B;
   font-size: 18px;
 }
 
@@ -91,7 +91,7 @@
   content: "\f0a9";
   font-size: 65px;
   color: #76BFD0;
-  text-shadow: 0 0 10px #76BFD0;
+  text-shadow: 0 0 20px #76BFD0;
 }
 
 .swiper-button-prev:after {
@@ -100,7 +100,7 @@
   content: "\f0a8";
   font-size: 65px;
   color: #ED66A5;
-  text-shadow: 0 0 10px #ED66A5;
+  text-shadow: 0 0 20px #ED66A5;
 }
 
 .card {
@@ -109,32 +109,5 @@
   right: 50px;
   padding: 20px;
   width: 300px;
-}
-
-.swiper-container:before {
-  content: '';
-  display: inline-block;
-  width: 20%;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-  z-index: 20;
-  background: -webkit-gradient(linear, left top, right top, from(#141432), color-stop(10%, #141432), to(rgba(20, 20, 50, 0)));
-  background: linear-gradient(to right, #141432, #141432 10%, rgba(20, 20, 50, 0));
-  left: -10px;
-}
-
-.swiper-container:after {
-  content: '';
-  display: inline-block;
-  width: 20%;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-  z-index: 20;
-  background: -webkit-gradient(linear, right top, left top, from(#141432), color-stop(10%, #141432), to(rgba(20, 20, 50, 0)));
-  background: linear-gradient(to left, #141432, #141432 10%, rgba(20, 20, 50, 0));
-  top: 0;
-  right: -10px;
 }
 /*# sourceMappingURL=works.css.map */

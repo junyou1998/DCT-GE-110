@@ -1,24 +1,92 @@
-h2 {
-  color: #fff;
-  text-shadow: 0 0 10px #EB337B;
+.container {
+  height: 100vh;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#141432), color-stop(40%, #141432), to(#EB337B));
+  background: linear-gradient(#141432, #141432 40%, #EB337B);
 }
 
-h2 i {
+.activity {
+  color: #fff;
+  text-shadow: 0 0 20px #EB337B;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.activity i {
   color: #ED66A5;
 }
 
 h1 {
   margin: 0;
-  text-shadow: 0 0 10px #58B9CC;
+  text-shadow: 0 0 20px #58B9CC;
+}
+
+.logo {
+  position: absolute;
+  height: 60vh;
+  top: 55%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.digi {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 65px;
+  bottom: 15px;
 }
 
 .inform {
   color: #fff;
-  text-shadow: 0 0 10px #58B9CC;
+  text-shadow: 0 0 20px #58B9CC;
+}
+
+.inform .year {
+  margin-top: 10px;
+  line-height: 0%;
+}
+
+.inform .date {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.inform .location {
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .box-btn {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 191, 208, 0.5)), to(rgba(118, 191, 208, 0.3)));
   background: linear-gradient(rgba(118, 191, 208, 0.5), rgba(118, 191, 208, 0.3));
+  margin: 20px 0;
+}
+
+.card {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 20px;
+  width: 300px;
+}
+
+.card .title {
+  font-size: 25px;
+}
+
+.frame {
+  z-index: 0;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EB337B), color-stop(#141432), to(#58B9CC));
+  background: linear-gradient(#EB337B, #141432, #58B9CC);
 }
 /*# sourceMappingURL=index.css.map */
