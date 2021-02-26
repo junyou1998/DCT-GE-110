@@ -36,6 +36,8 @@ h1{
     height: 60vh;
     top: 55%;
     left: 55%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
 }
@@ -89,4 +91,38 @@ section{
     width: 100%;
     height: 100vh;
     background: linear-gradient($pink-glow ,$deepblue,$blue-glow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .slogans{
+        max-width: 800px;
+    }
+    .slogan{
+        margin: 15px 0;
+        white-space: nowrap;
+    }
+    .slogan:nth-child(odd){
+        color: #fff;
+        @include text-glow($blue-glow);
+        font-size: $font-h1;
+        font-weight: 700;
+        transform: translateX(-65px);
+        .en{
+            color: $blue;
+            font-weight: 900;
+        }
+    }
+    .slogan:nth-child(even){
+        color: #fff;
+        @include text-glow($pink-glow);
+        font-size: $font-h1;
+        font-weight: 700;
+
+        .en{
+            color: $pink;
+            font-weight: 900;
+
+        }
+    }
 }

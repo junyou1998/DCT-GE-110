@@ -27,6 +27,8 @@ h1 {
   height: 60vh;
   top: 55%;
   left: 55%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
@@ -88,5 +90,53 @@ section {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#EB337B), color-stop(#141432), to(#58B9CC));
   background: linear-gradient(#EB337B, #141432, #58B9CC);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .slogans {
+  max-width: 800px;
+}
+
+section .slogan {
+  margin: 15px 0;
+  white-space: nowrap;
+}
+
+section .slogan:nth-child(odd) {
+  color: #fff;
+  text-shadow: 0 0 20px #58B9CC;
+  font-size: 3.125rem;
+  font-weight: 700;
+  -webkit-transform: translateX(-65px);
+          transform: translateX(-65px);
+}
+
+section .slogan:nth-child(odd) .en {
+  color: #76BFD0;
+  font-weight: 900;
+}
+
+section .slogan:nth-child(even) {
+  color: #fff;
+  text-shadow: 0 0 20px #EB337B;
+  font-size: 3.125rem;
+  font-weight: 700;
+}
+
+section .slogan:nth-child(even) .en {
+  color: #ED66A5;
+  font-weight: 900;
 }
 /*# sourceMappingURL=index.css.map */
