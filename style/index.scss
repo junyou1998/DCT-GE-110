@@ -1,24 +1,23 @@
 @import "variable";
 
-.container{
+.container {
     // width: 100%;
     height: 100vh;
     position: relative;
-    background: linear-gradient($deepblue,$deepblue 40%,$pink-glow);
+    background: linear-gradient($deepblue, $deepblue 40%, $pink-glow);
 }
 
-.activity{
+.activity {
     color: #fff;
     @include text-glow($pink-glow);
     font-size: $font-h2;
     font-weight: 700;
     margin-top: 25px;
-    i{
+    i {
         color: $pink;
-        
     }
 }
-h1{
+h1 {
     margin: 0;
     @include text-glow($blue-glow);
 }
@@ -31,98 +30,151 @@ h1{
 //     top: 0px;
 //     // transform: translate(-50%,-50%);
 // }
-.logo{
+.logo {
     position: absolute;
     height: 60vh;
     top: 55%;
     left: 55%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
-.digi{
+.digi {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     height: 65px;
     bottom: 15px;
 }
-.inform{
+.inform {
     color: #fff;
     @include text-glow($blue-glow);
-    .year{
+    .year {
         margin-top: 10px;
         line-height: 0%;
     }
-    .date{
-        font-size:  25px;
+    .date {
+        font-size: 25px;
         font-weight: 700;
     }
-    .location{
-        font-size:  25px;
+    .location {
+        font-size: 25px;
         font-weight: 700;
     }
-    .number{
-
+    .number {
     }
 }
 
-.box-btn{
+.box-btn {
     background: linear-gradient(rgba($blue, 0.5), rgba($blue, 0.3));
     margin: 20px 0;
 }
 
 .card {
-
     position: absolute;
     bottom: 50px;
     right: 50px;
     padding: 20px;
     width: 300px;
-    .title{
+    .title {
         font-size: 25px;
     }
 }
-.frame{
-    z-index:  0;
+.frame {
+    z-index: 0;
 }
-section{
+section {
     width: 100%;
     height: 100vh;
-    background: linear-gradient($pink-glow ,$deepblue,$blue-glow);
+    background: linear-gradient($pink-glow, $deepblue, $blue-glow);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .slogans{
-        max-width: 800px;
+    position: relative;
+    z-index: 1;
+    .slogans {
+        max-width: 750px;
     }
-    .slogan{
+    .slogan {
         margin: 15px 0;
         white-space: nowrap;
     }
-    .slogan:nth-child(odd){
+    .slogan:nth-child(odd) {
         color: #fff;
         @include text-glow($blue-glow);
         font-size: $font-h1;
         font-weight: 700;
         transform: translateX(-65px);
-        .en{
+        .en {
             color: $blue;
             font-weight: 900;
         }
     }
-    .slogan:nth-child(even){
+    .slogan:nth-child(even) {
         color: #fff;
         @include text-glow($pink-glow);
         font-size: $font-h1;
         font-weight: 700;
 
-        .en{
+        .en {
             color: $pink;
             font-weight: 900;
+        }
+    }
+}
 
+.shadow {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 90px;
+    text-shadow: none;
+
+    font-weight: 900;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text {
+        // line-height: 50px;
+        margin: -15px 0;
+    }
+    .text:nth-child(odd) {
+        color: rgba($blue, 0.2);
+        div {
+            width: 35px;
+            height: 66px;
+            display: inline-block;
+            background-color: rgba($blue, 0.2);
+            transform: skew(-25deg);
+            margin: 0 -8px;
+        }
+        @for $i from 1 through 11 {
+            div:nth-child(#{$i}) {
+                background-color: rgba($blue, 0.2* $i/5);
+            }
+        }
+    }
+    .text:nth-child(even) {
+        color: rgba($pink, 0.2);
+        div {
+            width: 35px;
+            height: 66px;
+            display: inline-block;
+            background-color: rgba($pink, 0.2);
+            transform: skew(25deg);
+            margin: 0 -8px;
+        }
+        @for $i from 1 through 11 {
+            div:nth-child(#{$i}) {
+                background-color: rgba($pink, 0.2*$i/10);
+            }
         }
     }
 }
