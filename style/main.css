@@ -4,6 +4,7 @@
           box-sizing: border-box;
   outline: none;
   font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
 }
 
 body {
@@ -66,9 +67,9 @@ nav .btn {
 
 .box-btn {
   display: inline-block;
-  padding: 6px 15px;
+  padding: 6px 18px;
   background-color: #76BFD0;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
@@ -111,8 +112,8 @@ h1 {
 .card {
   border-radius: 5px;
   display: inline-block;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 191, 208, 0.5)), to(rgba(118, 191, 208, 0.3)));
-  background: linear-gradient(rgba(118, 191, 208, 0.5), rgba(118, 191, 208, 0.3));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(57, 146, 167, 0.7)), to(rgba(57, 146, 167, 0.5)));
+  background: linear-gradient(rgba(57, 146, 167, 0.7), rgba(57, 146, 167, 0.5));
   color: #76BFD0;
   font-size: 1rem;
 }

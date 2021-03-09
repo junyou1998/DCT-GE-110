@@ -5,7 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style/main.css" />
         <link rel="stylesheet" href="style/works.css" />
@@ -16,13 +21,14 @@
                 <a class="btn" href="/">首頁</a>
                 <a class="btn active" href="/works.html">作品總覽</a>
                 <div class="btn">我們是誰</div>
-                <div class="btn">歷屆展覽</div>
+                <!-- <div class="btn">歷屆展覽</div> -->
             </nav>
-            <h1>蛙蜍相爭</h1>
+            <div class="work-name">蛙蜍相爭</div>
+            <h1></h1>
             <div class="tags">
                 <span>#遊戲</span>
-            </div>    
-            <div class="gallery">
+            </div>
+            <div class="silder">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
@@ -36,21 +42,42 @@
                         <div class="swiper-slide">Slide 9</div>
                         <div class="swiper-slide">Slide 10</div>
                     </div>
-                    
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-            
 
-            
-            <div class="card">
+            <!-- <div class="card intro">
                 青蛙X蟾蜍 不曾停更的開發團隊在這裡 創新的戰鬥模式快來膜拜一下吧~！
                 以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素...更多
-            </div>
+            </div> -->
             <div class="frame"><div class="inner"></div></div>
+
+            
         </div>
-        
+
+        <div class="popup display">
+                <div class="information card">
+                    <div class="title">GALLERY</div>
+                    <div class="hr"></div>
+                    <div class="gallery">
+                        <div class="lightbox"></div>
+                    </div>
+                    <div class="title">ABOUT</div>
+                    <div class="hr"></div>
+                    <p>青蛙X蟾蜍
+                        <br>不曾停更的開發團隊在這裡<br>創新的戰鬥模式快來膜拜一下吧~！</p><p>以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素，一方扮演青蛙，另一方則扮演蟾蜍，為了獲得更多的食物，勢不兩立的牠們的戰役就此展開。</p>
+                    <div class="title">MEMBER</div>
+                    <div class="hr"></div>
+                    <div class="title">LINK</div>
+                    <div class="hr"></div>
+                    <div class="cancel">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
             var swiper = new Swiper(".swiper-container", {
@@ -60,10 +87,18 @@
                 loop: true,
                 grabCursor: true,
                 navigation: {
-                    nextEl: document.querySelector('.swiper-button-next'),
-                    prevEl: document.querySelector('.swiper-button-prev'),
+                    nextEl: document.querySelector(".swiper-button-next"),
+                    prevEl: document.querySelector(".swiper-button-prev"),
                 },
             });
+
+            
+        const popup = document.querySelector('.popup')
+        const cancel = document.querySelector('.cancel')
+
+        cancel.onclick = () => {
+            popup.classList.remove('display')
+        }
         </script>
     </body>
 </html>
