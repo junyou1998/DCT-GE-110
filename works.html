@@ -112,10 +112,15 @@
             
         const popup = document.querySelector('.popup')
         const cancel = document.querySelector('.cancel')
-
+        let slider = document.querySelectorAll('.swiper-slide')
         cancel.onclick = () => {
             popup.classList.remove('display')
         }
+        slider.forEach((e)=>{
+            e.onclick = ()=>{
+                popup.classList.add('display')
+            }
+        })
         </script>
     </body>
 </html>
