@@ -13,13 +13,26 @@ body {
     font-weight: 500;
     outline: none;
 }
+.menu{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20px
+}
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 100;
     // padding: 25px 0;
     .btn {
         margin: 0 4px;
+    }
+    @media screen and (max-width: 769px){
+        display: none;
     }
 }
 .container {
@@ -27,6 +40,9 @@ nav {
     margin: auto;
     position: relative;
     padding: 25px 80px;
+    @media screen and (max-width: 769px){
+        padding: 25px 0;
+    }
 }
 
 // 預設圓角按鈕
@@ -88,6 +104,9 @@ h1 {
     left: 0;
     top: 0;
     pointer-events: none;
+    @media screen and(max-width: 768px){
+        padding: 0;
+    }
     .inner {
         width: 100%;
         height: 100%;
@@ -118,4 +137,165 @@ h1 {
         background: linear-gradient(to right, $blue, transparent);
         margin: 3px 0;
     }
+}
+
+#nav-M{
+    display: none;
+}
+@media (max-width: 991px){
+
+    #nav-M {
+
+        display: block;
+    }
+    .nav-wrapper{
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-color: $darkblue;
+        opacity: 0;
+        transition: all 0.2s ease ;      
+    }
+    .nav-wrapper ul{
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .nav-wrapper ul li {
+
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-wrapper ul li:nth-child(1) a {
+
+        transition-delay: 0.1s;
+    }
+    .nav-wrapper ul li:nth-child(2) a {
+
+        transition-delay: 0.2s;
+    }
+    .nav-wrapper ul li:nth-child(3) a {
+
+        transition-delay: 0.3s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+
+        margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+
+        padding: 10px 0 24px 10px;
+        opacity: 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+    .nav-wrapper ul li{
+
+        &:before{
+
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 18px;
+            background-color: #fff;
+        }
+    }
+        
+        
+    .navBtn{
+
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+    .navBtn i{
+
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $pink;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+    .navBtn i:nth-child(1){
+
+        margin-top: 16px;
+    }
+    .navBtn i:nth-child(2){
+
+        margin-top: 4px;
+        opacity: 1;
+    }
+    .navBtn i:nth-child(3){
+
+        margin-top: 4px;
+    }
+}
+
+#phoneNav:checked + .navBtn{
+
+    transform: rotate(45deg);
+}
+
+#phoneNav:checked + .navBtn i{
+
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+#phoneNav:checked + .navBtn i:nth-child(1){
+
+    transform: translateY(6px) rotate(180deg)  ;
+}
+
+#phoneNav:checked + .navBtn i:nth-child(2){
+
+    opacity: 0;
+}
+
+#phoneNav:checked + .navBtn i:nth-child(3){
+
+    transform: translateY(-6px) rotate(90deg);  
+}
+
+#phoneNav:checked ~ .nav-wrapper{
+
+    z-index: 9900;
+    opacity: 1;
+}
+#phoneNav:checked ~ .nav-wrapper ul li a{
+
+    opacity: 1;
+    transform: translateX(0)  ;
+}
+.hidden{
+
+    display: none   ;
 }

@@ -23,6 +23,17 @@
                 <div class="btn">我們是誰</div>
                 <!-- <div class="btn">歷屆展覽</div> -->
             </nav>
+            <nav id="nav-M">
+                <input class="hidden" type="checkbox" id="phoneNav" />
+                <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li><a href="/">回到首頁</a></li>
+                        <li><a href="/works.html">作品總覽</a></li>
+                        <li><a href="">我們是誰</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="work-name">蛙蜍相爭</div>
             <h1></h1>
             <div class="tags">
@@ -81,7 +92,7 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
             var swiper = new Swiper(".swiper-container", {
-                slidesPerView: 4,
+                slidesPerView: 2,
                 spaceBetween: 30,
                 centeredSlides: true,
                 loop: true,
@@ -90,6 +101,12 @@
                     nextEl: document.querySelector(".swiper-button-next"),
                     prevEl: document.querySelector(".swiper-button-prev"),
                 },
+                breakpoints: {
+                    765: {
+                        slidesPerView: 4,
+                        spaceBetween: 10,
+                    }
+                }
             });
 
             

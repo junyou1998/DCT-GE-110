@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="style/index.css" />
     </head>
     <body>
-        
         <section class="section-1">
             <div class="container">
                 <nav>
@@ -24,19 +23,32 @@
                     <div class="btn">我們是誰</div>
                     <!-- <div class="btn">歷屆展覽</div> -->
                 </nav>
+
+                <nav id="nav-M">
+                    <input class="hidden" type="checkbox" id="phoneNav" />
+                    <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
+                    <div class="nav-wrapper">
+                        <ul>
+                            <li><a href="/">回到首頁</a></li>
+                            <li><a href="/works.html">作品總覽</a></li>
+                            <li><a href="">我們是誰</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
                 <div class="illuminate"></div>
                 <img class="logo" src="images/logo.png" alt="" />
                 <img src="images/digi.png" alt="" class="digi" />
-                <div class="recent">近期展覽 <i class="fas fa-angle-double-right"></i></div>
-                <div class="activity">放視大賞</div>
                 <div class="inform">
+                    <div class="recent">近期展覽 <i class="fas fa-angle-double-right"></i></div>
+                    <div class="activity">放視大賞</div>
                     <div class="year">2021</div>
                     <div class="date">5.05 - 5.07</div>
                     <div class="location">高雄展覽館</div>
                     <div class="number">攤位編號尚未公布請見諒</div>
                 </div>
                 <div class="box-btn">活動官網<i class="fas fa-angle-double-right"></i></div>
-    
+
                 <div class="card">
                     <div class="title">DIGI－獨數異格</div>
                     <div class="hr"></div>
@@ -115,8 +127,10 @@
             </div>
         </section>
         <section class="section-3">
-            <img src="./images/logo-hor.png" alt="">
-            <div class="some-text"><i class="fas fa-angle-double-right"></i> 擁有獨自的品味和風格，期許班上的每個人在畢業時成為了各有特色的人物。</div>
+            <img src="./images/logo-hor.png" alt="" />
+            <div class="some-text">
+                <i class="fas fa-angle-double-right"></i> 擁有獨自的品味和風格，期許班上的每個人在畢業時成為了各有特色的人物。
+            </div>
 
             <div class="blur"></div>
         </section>
@@ -124,10 +138,22 @@
             <div class="feeback">
                 為我們寫下寶貴的意見吧！
                 <div class="box-btn">回饋表單<i class="fas fa-angle-double-right"></i></div>
-            <div class="blur"></div>
-
+                <div class="blur"></div>
             </div>
             <div class="footer"></div>
         </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(window).scroll(function (evt) {
+                if ($(window).scrollTop() > 0) {
+                    $(".navbar").addClass("hide");
+                    $("#nav-M").addClass("hide");
+                    $("#phoneNav").prop("checked", false);
+                } else {
+                    $(".navbar").removeClass("hide");
+                    $("#nav-M").removeClass("hide");
+                }
+            });
+        </script>
     </body>
 </html>

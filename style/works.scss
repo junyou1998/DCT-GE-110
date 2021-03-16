@@ -1,5 +1,5 @@
 @import "variable";
-body{
+body {
     overflow: hidden;
 }
 .container {
@@ -14,12 +14,19 @@ body{
     font-weight: bold;
     margin: 10px 0;
     @include text-glow($pink-glow);
+    @media screen and (max-width: 768px){
+        font-size: 50px;
+        margin-left: 20px;
+    }
 }
 
 .tags {
     color: $pink;
     @include text-glow($pink-glow);
     font-size: 18px;
+    @media screen and (max-width: 768px){
+        margin-left: 20px;
+    }
 }
 .silder {
     width: 98%;
@@ -88,30 +95,31 @@ body{
     right: 50px;
     padding: 20px;
     width: 300px;
+
+
 }
 
-
-.popup{
+.popup {
     position: absolute;
     top: 0;
     left: 0;
     display: inline-block;
     width: 100%;
     height: 100vh;
-    background-color: rgba(black,.4);
+    background-color: rgba(black, 0.4);
     backdrop-filter: blur(6px);
     overflow-y: scroll;
     // display: none;
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
     z-index: -100;
 
-    &.display{
+    &.display {
         display: inline-block;
         opacity: 1;
         z-index: 1;
     }
-    .information{
+    .information {
         // overflow: scroll;
         border-radius: 10px;
         position: absolute;
@@ -123,24 +131,31 @@ body{
         padding: 20px 15px;
         min-width: 800px;
         font-weight: normal;
-        .hr{
+        @media screen and(max-width: 768px) {
+            min-width: calc(100% - 15px);
+            max-width: 100%;
+            right: 10px;
+            bottom: 50px;
+            top: 50px;
+        }
+        .hr {
             width: calc(100% + 30px);
             transform: translateX(-15px);
             margin-bottom: 15px;
         }
-        .title{
+        .title {
             // margin: 10px 0 0 10px;
         }
-        p{
+        p {
             width: 80%;
         }
-        .gallery{
+        .gallery {
             width: 80%;
             height: 400px;
             background-color: $blue;
             border-radius: 5px;
         }
-        .cancel{
+        .cancel {
             width: 80px;
             height: 80px;
             border-radius: 100%;
@@ -148,23 +163,31 @@ body{
             position: absolute;
             top: 0;
             right: 0;
-            transform: translate(45%,-45%);
+            transform: translate(45%, -45%);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            i{
+            i {
                 font-size: 65px;
                 color: #fff;
             }
+            @media screen and(max-width: 768px){
+                width: 50px;
+                height: 50px;
+                transform: translate(-10px, 10px);
+
+                i{
+                    font-size: 25px;
+                }
+            }
         }
     }
-    
 }
 ::-webkit-scrollbar {
     width: 0px;
-  }
-  
+}
+
 // .card{
 //     .hr{
 //         width: calc(100% +20px);

@@ -1,5 +1,5 @@
 @import "variable";
-body{
+body {
     overflow-x: hidden;
 }
 .container {
@@ -17,6 +17,10 @@ body{
     i {
         color: $pink;
     }
+    @media screen and(max-width: 768px) {
+        margin-top: 0;
+        font-size: 25px;
+    }
 }
 .activity {
     margin: 0;
@@ -25,6 +29,9 @@ body{
     font-weight: bold;
     // margin: 10px 0;
     @include text-glow($blue-glow);
+    @media screen and(max-width: 768px) {
+        font-size: 45px;
+    }
 }
 .logo {
     position: absolute;
@@ -35,6 +42,10 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    @media screen and (max-width: 769px) {
+        max-width: 90vw;
+        min-height: auto;
+    }
 }
 .digi {
     position: absolute;
@@ -42,25 +53,49 @@ body{
     transform: translateX(-50%);
     height: 85px;
     bottom: 10px;
+    @media screen and (max-width: 769px) {
+        max-width: 90vw;
+        bottom: 25px;
+    }
+}
+.box-btn {
+    @media screen and(max-width: 768px) {
+        display: none;
+    }
 }
 .inform {
     color: #fff;
     @include text-glow($blue-glow);
+    @media screen and(max-width: 768px) {
+        padding: 0 15px;
+    }
     .year {
         font-size: 20px;
         margin-top: 10px;
         line-height: 0%;
+        @media screen and(max-width: 768px) {
+            font-size: 15px;
+        }
     }
     .date {
         font-size: 35px;
         font-weight: 700;
+        @media screen and(max-width: 768px) {
+            font-size: 25px;
+        }
     }
     .location {
         font-size: 35px;
         font-weight: 700;
+        @media screen and(max-width: 768px) {
+            font-size: 30px;
+        }
     }
     .number {
         font-size: 20px;
+        @media screen and(max-width: 768px) {
+            font-size: 15px;
+        }
     }
 }
 
@@ -79,11 +114,17 @@ body{
     .title {
         font-size: 25px;
     }
+    @media screen and(max-width: 768px) {
+        display: none;
+    }
 }
 .frame {
     z-index: 0;
+    @media screen and (max-width: 769px) {
+        // display: none;
+    }
 }
-section{
+section {
     width: 100%;
     height: 100vh;
 }
@@ -100,15 +141,26 @@ section{
     z-index: 1;
     .slogans {
         max-width: 750px;
+        @media screen and (max-width: 769px) {
+            max-width: 100vw;
+            overflow: hidden;
+            padding: 10px;
+        }
         .slogan {
             color: #fff;
             margin: 15px 0;
             white-space: nowrap;
             font-size: 70px;
             font-weight: 700;
+            @media screen and (max-width: 769px) {
+                font-size: 30px;
+            }
             .en {
                 font-size: 70px;
                 font-weight: 900;
+                @media screen and (max-width: 769px) {
+                    font-size: 30px;
+                }
             }
         }
         .slogan:nth-child(odd) {
@@ -116,6 +168,9 @@ section{
             transform: translateX(-65px);
             .en {
                 color: $blue;
+            }
+            @media screen and (max-width: 769px) {
+                transform: translateX(0px);
             }
         }
         .slogan:nth-child(even) {
@@ -132,17 +187,27 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media screen and (max-width: 769px) {
+        img {
+            width: 80vw;
+        }
+    }
     .some-text {
-        color: lighten($blue,20);
+        color: lighten($blue, 20);
         @include text-glow($blue-glow);
+        @media screen and (max-width: 769px) {
+            padding: 0 20px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
         font-size: 25px;
         i {
             font-size: 25px;
         }
     }
     position: relative;
-    .blur{
-        content: '';
+    .blur {
+        content: "";
         position: absolute;
         width: 100%;
         height: 100px;
@@ -151,10 +216,10 @@ section{
         backdrop-filter: blur(15px);
     }
 }
-.section-4{
+.section-4 {
     display: flex;
     flex-direction: column;
-    .feeback{
+    .feeback {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -164,8 +229,8 @@ section{
         @include text-glow($blue-glow);
         font-size: 25px;
         position: relative;
-        .blur{
-            content: '';
+        .blur {
+            content: "";
             position: absolute;
             width: 100%;
             height: 100px;
@@ -173,9 +238,8 @@ section{
             bottom: -50px;
             backdrop-filter: blur(15px);
         }
-
     }
-    .footer{
+    .footer {
         flex: 1;
         background-color: black;
     }
@@ -194,11 +258,17 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 769px) {
+        overflow: hidden;
+    }
     .text {
         // line-height: 50px;
         margin: -15px 0;
         font-size: 150px;
         font-weight: 900;
+        @media screen and (max-width: 769px) {
+            font-size: 80px;
+        }
     }
     .text:nth-child(odd) {
         color: rgba($blue, 0.15);
@@ -209,6 +279,9 @@ section{
             background-color: rgba($blue, 0.15);
             transform: skew(-25deg);
             margin: 0 -8px;
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
         }
         @for $i from 1 through 11 {
             div:nth-child(#{$i}) {
@@ -225,6 +298,9 @@ section{
             background-color: rgba($pink, 0.15);
             transform: skew(25deg);
             margin: 0 -8px;
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
         }
         @for $i from 1 through 11 {
             div:nth-child(#{$i}) {

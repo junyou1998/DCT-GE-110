@@ -19,12 +19,25 @@ body {
   color: #ED66A5;
 }
 
+@media screen and (max-width: 768px) {
+  .recent {
+    margin-top: 0;
+    font-size: 25px;
+  }
+}
+
 .activity {
   margin: 0;
   color: #fff;
   font-size: 70px;
   font-weight: bold;
   text-shadow: 0 0 20px #58B9CC;
+}
+
+@media screen and (max-width: 768px) {
+  .activity {
+    font-size: 45px;
+  }
 }
 
 .logo {
@@ -39,6 +52,13 @@ body {
   z-index: 2;
 }
 
+@media screen and (max-width: 769px) {
+  .logo {
+    max-width: 90vw;
+    min-height: auto;
+  }
+}
+
 .digi {
   position: absolute;
   left: 50%;
@@ -48,9 +68,28 @@ body {
   bottom: 10px;
 }
 
+@media screen and (max-width: 769px) {
+  .digi {
+    max-width: 90vw;
+    bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-btn {
+    display: none;
+  }
+}
+
 .inform {
   color: #fff;
   text-shadow: 0 0 20px #58B9CC;
+}
+
+@media screen and (max-width: 768px) {
+  .inform {
+    padding: 0 15px;
+  }
 }
 
 .inform .year {
@@ -59,9 +98,21 @@ body {
   line-height: 0%;
 }
 
+@media screen and (max-width: 768px) {
+  .inform .year {
+    font-size: 15px;
+  }
+}
+
 .inform .date {
   font-size: 35px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .inform .date {
+    font-size: 25px;
+  }
 }
 
 .inform .location {
@@ -69,8 +120,20 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 768px) {
+  .inform .location {
+    font-size: 30px;
+  }
+}
+
 .inform .number {
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .inform .number {
+    font-size: 15px;
+  }
 }
 
 .box-btn {
@@ -90,6 +153,12 @@ body {
 
 .card .title {
   font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    display: none;
+  }
 }
 
 .frame {
@@ -130,6 +199,14 @@ section {
   max-width: 750px;
 }
 
+@media screen and (max-width: 769px) {
+  .section-2 .slogans {
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 10px;
+  }
+}
+
 .section-2 .slogans .slogan {
   color: #fff;
   margin: 15px 0;
@@ -138,9 +215,21 @@ section {
   font-weight: 700;
 }
 
+@media screen and (max-width: 769px) {
+  .section-2 .slogans .slogan {
+    font-size: 30px;
+  }
+}
+
 .section-2 .slogans .slogan .en {
   font-size: 70px;
   font-weight: 900;
+}
+
+@media screen and (max-width: 769px) {
+  .section-2 .slogans .slogan .en {
+    font-size: 30px;
+  }
 }
 
 .section-2 .slogans .slogan:nth-child(odd) {
@@ -151,6 +240,13 @@ section {
 
 .section-2 .slogans .slogan:nth-child(odd) .en {
   color: #76BFD0;
+}
+
+@media screen and (max-width: 769px) {
+  .section-2 .slogans .slogan:nth-child(odd) {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 .section-2 .slogans .slogan:nth-child(even) {
@@ -180,10 +276,24 @@ section {
   position: relative;
 }
 
+@media screen and (max-width: 769px) {
+  .section-3 img {
+    width: 80vw;
+  }
+}
+
 .section-3 .some-text {
   color: #c2e2ea;
   text-shadow: 0 0 20px #58B9CC;
   font-size: 25px;
+}
+
+@media screen and (max-width: 769px) {
+  .section-3 .some-text {
+    padding: 0 20px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
 }
 
 .section-3 .some-text i {
@@ -191,7 +301,7 @@ section {
 }
 
 .section-3 .blur {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100px;
@@ -235,7 +345,7 @@ section {
 }
 
 .section-4 .feeback .blur {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100px;
@@ -277,10 +387,22 @@ section {
           align-items: center;
 }
 
+@media screen and (max-width: 769px) {
+  .shadow {
+    overflow: hidden;
+  }
+}
+
 .shadow .text {
   margin: -15px 0;
   font-size: 150px;
   font-weight: 900;
+}
+
+@media screen and (max-width: 769px) {
+  .shadow .text {
+    font-size: 80px;
+  }
 }
 
 .shadow .text:nth-child(odd) {
@@ -295,6 +417,12 @@ section {
   -webkit-transform: skew(-25deg);
           transform: skew(-25deg);
   margin: 0 -8px;
+}
+
+@media screen and (max-width: 769px) {
+  .shadow .text:nth-child(odd) div {
+    display: none;
+  }
 }
 
 .shadow .text:nth-child(odd) div:nth-child(1) {
@@ -353,6 +481,12 @@ section {
   -webkit-transform: skew(25deg);
           transform: skew(25deg);
   margin: 0 -8px;
+}
+
+@media screen and (max-width: 769px) {
+  .shadow .text:nth-child(even) div {
+    display: none;
+  }
 }
 
 .shadow .text:nth-child(even) div:nth-child(1) {

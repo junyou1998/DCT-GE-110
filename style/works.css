@@ -16,10 +16,23 @@ body {
   text-shadow: 0 0 20px #EB337B;
 }
 
+@media screen and (max-width: 768px) {
+  .work-name {
+    font-size: 50px;
+    margin-left: 20px;
+  }
+}
+
 .tags {
   color: #ED66A5;
   text-shadow: 0 0 20px #EB337B;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .tags {
+    margin-left: 20px;
+  }
 }
 
 .silder {
@@ -125,8 +138,8 @@ body {
           backdrop-filter: blur(6px);
   overflow-y: scroll;
   opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: -100;
 }
 
@@ -147,6 +160,16 @@ body {
   padding: 20px 15px;
   min-width: 800px;
   font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .popup .information {
+    min-width: calc(100% - 15px);
+    max-width: 100%;
+    right: 10px;
+    bottom: 50px;
+    top: 50px;
+  }
 }
 
 .popup .information .hr {
@@ -192,6 +215,18 @@ body {
 .popup .information .cancel i {
   font-size: 65px;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .popup .information .cancel {
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translate(-10px, 10px);
+            transform: translate(-10px, 10px);
+  }
+  .popup .information .cancel i {
+    font-size: 25px;
+  }
 }
 
 ::-webkit-scrollbar {
