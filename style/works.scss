@@ -45,7 +45,8 @@ body {
     align-items: center;
 }
 .swiper-slide {
-    height: 60%;
+    // height: 60%;
+    height: 381px;
     border-radius: 0.5px;
     text-align: center;
     font-size: 18px;
@@ -64,6 +65,9 @@ body {
         transform: scale(1);
         box-shadow: inset 0px 0px 15px 2px rgba(darken($blue, 20), 1), 0px 0px 0px 8px rgba(lighten($blue-glow, 30), 1),
             0px 0px 20px 10px rgba($blue-glow, 1);
+    }
+    img{
+        width: 100%;
     }
 }
 .swiper-button-next {

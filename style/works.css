@@ -58,7 +58,7 @@ body {
 }
 
 .swiper-slide {
-  height: 60%;
+  height: 381px;
   border-radius: 0.5px;
   text-align: center;
   font-size: 18px;
@@ -90,6 +90,10 @@ body {
           transform: scale(1);
   -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
           box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
+}
+
+.swiper-slide img {
+  width: 100%;
 }
 
 .swiper-button-next {

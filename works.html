@@ -40,7 +40,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="work-name">蛙蜍相爭</div>
+            <div class="work-name">蛙蜍相爭{{activeWork}}</div>
             <h1></h1>
             <div class="tags">
                 <span>#遊戲</span>
@@ -48,7 +48,9 @@
             <div class="silder">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="work in works" @click="handShow">{{work.title}}</div>
+                        <div class="swiper-slide" v-for="(work,index) in works" @click="[handShow(), change(index)]">
+                            <img :src="work.img" alt="">
+                        </div>
                         <!-- <div class="swiper-slide">Slide 2</div>
                         <div class="swiper-slide">Slide 3</div>
                         <div class="swiper-slide">Slide 4</div>
@@ -118,11 +120,20 @@
         //         popup.classList.add('display')
         //     }
         // })
-        const { ref,onMounted,watch,nextTick } = Vue
+        const { reactive,ref,onMounted,watch,nextTick,computed } = Vue
         const App = {
             setup() {
                 const works = ref([])
                 const isShow = ref(true)
+                const index = ref(0)
+
+                const activeWork = computed(()=>{
+                    // console.log("--------");
+                    console.log(works);
+                    console.log(works.value[index.value]);
+                    return works.value[index.value]
+                })
+
                 let swiper = null;
 
                 watch(works,(newVal)=>{
@@ -131,11 +142,17 @@
                     })
                 })
 
+
+
                 onMounted(() => {
                     axios.get('/data.json')
                         .then((res)=>{
                             works.value = res.data
+                            console.log("------")
+
                             console.log(works.value)
+                            console.log("------")
+
                         })
 
                     swiper = new Swiper(".swiper-container", {
@@ -159,7 +176,13 @@
                 const handShow = () => {
                     isShow.value = !isShow.value
                 }
-                return {works,isShow,handShow}
+
+                const change = (idx) =>{
+                    index.value = idx
+
+                    console.log(index.value)
+                }
+                return {works,isShow,handShow,index,change,activeWork}
             }
         }
         Vue.createApp(App).mount("#app")
