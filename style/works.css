@@ -137,16 +137,6 @@ body {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   overflow-y: scroll;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  z-index: -100;
-}
-
-.popup.display {
-  display: inline-block;
-  opacity: 1;
-  z-index: 1;
 }
 
 .popup .information {
@@ -231,5 +221,31 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.fade-enter-to {
+  opacity: 1;
 }
 /*# sourceMappingURL=works.css.map */

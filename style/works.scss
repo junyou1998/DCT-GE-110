@@ -14,7 +14,7 @@ body {
     font-weight: bold;
     margin: 10px 0;
     @include text-glow($pink-glow);
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         font-size: 50px;
         margin-left: 20px;
     }
@@ -24,7 +24,7 @@ body {
     color: $pink;
     @include text-glow($pink-glow);
     font-size: 18px;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
         margin-left: 20px;
     }
 }
@@ -95,8 +95,6 @@ body {
     right: 50px;
     padding: 20px;
     width: 300px;
-
-
 }
 
 .popup {
@@ -110,15 +108,15 @@ body {
     backdrop-filter: blur(6px);
     overflow-y: scroll;
     // display: none;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: -100;
+    // opacity: 0;
+    // transition: 0.5s;
+    // z-index: -100;
 
-    &.display {
-        display: inline-block;
-        opacity: 1;
-        z-index: 1;
-    }
+    // &.display {
+    //     display: inline-block;
+    //     opacity: 1;
+    //     z-index: 1;
+    // }
     .information {
         // overflow: scroll;
         border-radius: 10px;
@@ -172,12 +170,12 @@ body {
                 font-size: 65px;
                 color: #fff;
             }
-            @media screen and(max-width: 768px){
+            @media screen and(max-width: 768px) {
                 width: 50px;
                 height: 50px;
                 transform: translate(-10px, 10px);
 
-                i{
+                i {
                     font-size: 25px;
                 }
             }
@@ -217,3 +215,22 @@ body {
 //     top: 0;
 //     right: -10px;
 // }
+
+.fade-leave {
+    opacity: 1;
+}
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-leave-to {
+    opacity: 0;
+}
+.fade-enter {
+    opacity: 0;
+}
+.fade-enter-active {
+    transition: opacity 0.5s;
+}
+.fade-enter-to {
+    opacity: 1;
+}

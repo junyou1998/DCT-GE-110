@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="content-language" content="zh-tw">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="cache-control" content="no-cache">
-        <meta http-equiv="expires" content="0"> 
-        <title>作品總覽</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="style/main.css" />
-        <link rel="stylesheet" href="style/works.css" />
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-language" content="zh-tw">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>作品總覽</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/works.css" />
+    
+</head>
+
+<body>
+    <div id="app">
+
         <div class="container">
             <nav>
                 <a class="btn" href="/">首頁</a>
@@ -46,8 +48,8 @@
             <div class="silder">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide" v-for="work in works" @click="handShow">{{work.title}}</div>
+                        <!-- <div class="swiper-slide">Slide 2</div>
                         <div class="swiper-slide">Slide 3</div>
                         <div class="swiper-slide">Slide 4</div>
                         <div class="swiper-slide">Slide 5</div>
@@ -55,76 +57,114 @@
                         <div class="swiper-slide">Slide 7</div>
                         <div class="swiper-slide">Slide 8</div>
                         <div class="swiper-slide">Slide 9</div>
-                        <div class="swiper-slide">Slide 10</div>
+                        <div class="swiper-slide">Slide 10</div> -->
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-
+    
             <!-- <div class="card intro">
-                青蛙X蟾蜍 不曾停更的開發團隊在這裡 創新的戰鬥模式快來膜拜一下吧~！
-                以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素...更多
-            </div> -->
-            <div class="frame"><div class="inner"></div></div>
-
-            
+                    青蛙X蟾蜍 不曾停更的開發團隊在這裡 創新的戰鬥模式快來膜拜一下吧~！
+                    以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素...更多
+                </div> -->
+            <div class="frame">
+                <div class="inner"></div>
+            </div>
+    
+    
         </div>
-
-        <div class="popup display">
-                <div class="information card">
-                    <div class="title">GALLERY</div>
-                    <div class="hr"></div>
-                    <div class="gallery">
-                        <div class="lightbox"></div>
-                    </div>
-                    <div class="title">ABOUT</div>
-                    <div class="hr"></div>
-                    <p>青蛙X蟾蜍
-                        <br>不曾停更的開發團隊在這裡<br>創新的戰鬥模式快來膜拜一下吧~！</p><p>以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素，一方扮演青蛙，另一方則扮演蟾蜍，為了獲得更多的食物，勢不兩立的牠們的戰役就此展開。</p>
-                    <div class="title">MEMBER</div>
-                    <div class="hr"></div>
-                    <div class="title">LINK</div>
-                    <div class="hr"></div>
-                    <div class="cancel">
-                        <i class="fas fa-times"></i>
-                    </div>
+        <transition name="fade">
+        <div class="popup" v-show="isShow">
+            <div class="information card">
+                <div class="title">GALLERY</div>
+                <div class="hr"></div>
+                <div class="gallery">
+                    <div class="lightbox"></div>
+                </div>
+                <div class="title">ABOUT</div>
+                <div class="hr"></div>
+                <p>青蛙X蟾蜍
+                    <br>不曾停更的開發團隊在這裡<br>創新的戰鬥模式快來膜拜一下吧~！
+                </p>
+                <p>以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素，一方扮演青蛙，另一方則扮演蟾蜍，為了獲得更多的食物，勢不兩立的牠們的戰役就此展開。</p>
+                <div class="title">MEMBER</div>
+                <div class="hr"></div>
+                <div class="title">LINK</div>
+                <div class="hr"></div>
+                <div class="cancel" @click="handShow">
+                    <i class="fas fa-times"></i>
                 </div>
             </div>
         </div>
+        </transition>
+    </div>
 
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".swiper-container", {
-                slidesPerView: 2,
-                spaceBetween: 30,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                navigation: {
-                    nextEl: document.querySelector(".swiper-button-next"),
-                    prevEl: document.querySelector(".swiper-button-prev"),
-                },
-                breakpoints: {
-                    765: {
-                        slidesPerView: 4,
-                        spaceBetween: 10,
-                    }
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+
+
+
+        // const popup = document.querySelector('.popup')
+        // const cancel = document.querySelector('.cancel')
+        // let slider = document.querySelectorAll('.swiper-slide')
+        // cancel.onclick = () => {
+        //     popup.classList.remove('display')
+        // }
+        // slider.forEach((e) => {
+        //     e.onclick = () => {
+        //         popup.classList.add('display')
+        //     }
+        // })
+        const { ref,onMounted,watch,nextTick } = Vue
+        const App = {
+            setup() {
+                const works = ref([])
+                const isShow = ref(true)
+                let swiper = null;
+
+                watch(works,(newVal)=>{
+                    nextTick(()=>{
+                        swiper.update()
+                    })
+                })
+
+                onMounted(() => {
+                    axios.get('/data.json')
+                        .then((res)=>{
+                            works.value = res.data
+                            console.log(works.value)
+                        })
+
+                    swiper = new Swiper(".swiper-container", {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                        centeredSlides: true,
+                        loop: true,
+                        grabCursor: true,
+                        navigation: {
+                            nextEl: document.querySelector(".swiper-button-next"),
+                            prevEl: document.querySelector(".swiper-button-prev"),
+                        },
+                        breakpoints: {
+                            765: {
+                                slidesPerView: 4,
+                                spaceBetween: 10,
+                            }
+                        }
+                    });
+                })
+                const handShow = () => {
+                    isShow.value = !isShow.value
                 }
-            });
-
-            
-        const popup = document.querySelector('.popup')
-        const cancel = document.querySelector('.cancel')
-        let slider = document.querySelectorAll('.swiper-slide')
-        cancel.onclick = () => {
-            popup.classList.remove('display')
-        }
-        slider.forEach((e)=>{
-            e.onclick = ()=>{
-                popup.classList.add('display')
+                return {works,isShow,handShow}
             }
-        })
-        </script>
-    </body>
+        }
+        Vue.createApp(App).mount("#app")
+        
+    </script>
+</body>
+
 </html>
