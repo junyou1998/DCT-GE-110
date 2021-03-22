@@ -251,6 +251,12 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .popup .information .cancel {
+    border-radius: 5px;
+  }
+}
+
 .popup .information .cancel i {
   font-size: 65px;
   color: #fff;
