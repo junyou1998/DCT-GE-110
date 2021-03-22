@@ -51,6 +51,12 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .silder .swiper-container {
+    width: 100%;
+  }
+}
+
 .swiper-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -58,7 +64,8 @@ body {
 }
 
 .swiper-slide {
-  height: 381px;
+  height: auto;
+  overflow: hidden;
   border-radius: 0.5px;
   text-align: center;
   font-size: 18px;
@@ -81,15 +88,29 @@ body {
 }
 
 .swiper-slide.swiper-slide-next, .swiper-slide.swiper-slide-prev {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide.swiper-slide-next, .swiper-slide.swiper-slide-prev {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 .swiper-slide.swiper-slide-active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
           box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide.swiper-slide-active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .swiper-slide img {
@@ -100,8 +121,20 @@ body {
   right: 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .swiper-button-next {
+    right: 10px;
+  }
+}
+
 .swiper-button-prev {
   left: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev {
+    left: 10px;
+  }
 }
 
 .swiper-button-next:after {
@@ -113,6 +146,12 @@ body {
   text-shadow: 0 0 20px #76BFD0;
 }
 
+@media screen and (max-width: 768px) {
+  .swiper-button-next:after {
+    font-size: 40px;
+  }
+}
+
 .swiper-button-prev:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -120,6 +159,12 @@ body {
   font-size: 65px;
   color: #ED66A5;
   text-shadow: 0 0 20px #ED66A5;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev:after {
+    font-size: 40px;
+  }
 }
 
 .intro {

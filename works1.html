@@ -40,12 +40,7 @@
                     </ul>
                 </div>
             </nav>
-            <!-- <div v-for="(work,idx) in works">
-                <div class="work-name" v-if="index == idx">
-                    {{work.title}}
-                </div>
-            </div> -->
-            <div class="work-name" v-for="(work,idx) in works" v-show="index == idx ">{{work.title}}</div>
+            <div class="work-name"></div>
             <h1></h1>
             <div class="tags">
                 <span>#遊戲</span>
@@ -109,8 +104,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.global.js" integrity="sha512-pE0JXcdoj253JMM1FUIyWEAX1bOp/WOZ/02C2b+QbVf4T4M5iaP0gcP28Zrmqrn2gV0Ovjn+vWnMQP2D8yyLRw==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script>
 
 
@@ -151,15 +145,8 @@
                 watch(works,(newVal)=>{
                     nextTick(()=>{
                         swiper.update()
-
-                        swiper.on('slideChange', function() {
-
-                            index.value = swiper.realIndex
-                        console.log('*** swiper.realIndex',swiper.realIndex);
-                    });
                     })
                 })
-
                 
 
                 onMounted(() => {
@@ -194,6 +181,13 @@
                             }
                         }
                     });
+
+                    // swiper.on('slideChange', function() {
+                    //     console.log('*** swiper.realIndex');
+                    // });
+
+                    // console.log('*** swiper.realIndex');
+
                 })
                 const handShow = () => {
                     isShow.value = !isShow.value
@@ -202,8 +196,6 @@
                 const change = (idx) =>{
                     index.value = idx
                     // console.log(index.value)
-                    swiper.slideTo(idx);
-
                 }
                 return {
                     works,
@@ -214,10 +206,27 @@
                     activeWork,
                     Obj
                 }
+
+
             }
         }
         Vue.createApp(App).mount("#app")
         
+
+        const vm = Vue.createApp({
+            data(){
+                return{
+
+                }
+            },
+            mounted() {
+                
+            },
+
+            
+        })
+
+        vm.mount('#app')
     </script>
 </body>
 
