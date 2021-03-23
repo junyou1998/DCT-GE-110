@@ -40,69 +40,64 @@
                     </ul>
                 </div>
             </nav>
-            <!-- <div v-for="(work,idx) in works">
-                <div class="work-name" v-if="index == idx">
-                    {{work.title}}
-                </div>
-            </div> -->
-            <div class="work-name" v-for="(work,idx) in works" v-show="index == idx ">{{work.title}}</div>
-            <h1></h1>
+
+            <div class="work-name" v-if="activeWork">
+                {{activeWork.title}}
+            </div>
+
             <div class="tags">
                 <span>#遊戲</span>
             </div>
+
             <div class="silder">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(work,index) in Obj.theWorks" @click="[handShow(), change(index)]">
+                        <div class="swiper-slide" v-for="(work,index) in works" @click="[handShow(), change(index)]">
                             <img :src="work.img" alt="">
                         </div>
-                        <!-- <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                        <div class="swiper-slide">Slide 10</div> -->
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
     
-            <!-- <div class="card intro">
-                    青蛙X蟾蜍 不曾停更的開發團隊在這裡 創新的戰鬥模式快來膜拜一下吧~！
-                    以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素...更多
-                </div> -->
             <div class="frame">
                 <div class="inner"></div>
             </div>
     
     
         </div>
+
         <transition name="fade">
-        <div class="popup" v-show="isShow">
-            <div class="information card">
+        <div class="popup" v-show="isShow" >
+            <div class="information card" v-if="activeWork">
                 <div class="title">GALLERY</div>
                 <div class="hr"></div>
                 <div class="gallery">
-                    <div class="lightbox"></div>
+                    <img :src="activeWork.img" alt="">
+                    <div class="lightbox">
+                    </div>
                 </div>
                 <div class="title">ABOUT</div>
                 <div class="hr"></div>
-                <p>青蛙X蟾蜍
-                    <br>不曾停更的開發團隊在這裡<br>創新的戰鬥模式快來膜拜一下吧~！
-                </p>
-                <p>以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素，一方扮演青蛙，另一方則扮演蟾蜍，為了獲得更多的食物，勢不兩立的牠們的戰役就此展開。</p>
+                <p>{{activeWork.intro}}</p>
+
                 <div class="title">MEMBER</div>
                 <div class="hr"></div>
+                <div class="members">
+                    <div class="member" v-for="member in activeWork.members">
+                        {{member.name}}
+                    </div>
+                </div>
                 <div class="title">LINK</div>
                 <div class="hr"></div>
+
                 <div class="cancel" @click="handShow">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
+
+            <div class="cancel-layer" @click="handShow"></div>
         </div>
         </transition>
     </div>
@@ -133,17 +128,8 @@
                 const isShow = ref(false)
                 const index = ref(0)
 
-                const Obj = reactive({
-                    theWorks: []
-                })
-
                 const activeWork = computed(()=>{
-                    // console.log("--------");
-                    // console.log(works);
-                    // console.log(works.value[index.value]);
-                    // return works.value[index.value]
-
-                    return Obj.theWorks[index.value].title
+                    return works.value[index.value]
                 })
 
                 let swiper = null;
@@ -155,7 +141,6 @@
                         swiper.on('slideChange', function() {
 
                             index.value = swiper.realIndex
-                        console.log('*** swiper.realIndex',swiper.realIndex);
                     });
                     })
                 })
@@ -171,10 +156,6 @@
                             console.log(works.value)
                             console.log("------")
 
-                            Obj.theWorks = res.data
-                            console.log("------")
-                            console.log(Obj.theWorks)
-                            console.log("------")
                         })
 
                     swiper = new Swiper(".swiper-container", {
@@ -201,7 +182,6 @@
 
                 const change = (idx) =>{
                     index.value = idx
-                    // console.log(index.value)
                     swiper.slideTo(idx);
 
                 }
@@ -212,7 +192,6 @@
                     index,
                     change,
                     activeWork,
-                    Obj
                 }
             }
         }
