@@ -42,9 +42,7 @@ body {
 
 .logo {
   position: absolute;
-  min-height: 70vh;
-  top: 55%;
-  left: 55%;
+  width: 600px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -54,7 +52,7 @@ body {
 
 @media screen and (max-width: 769px) {
   .logo {
-    max-width: 90vw;
+    max-width: 85vw;
     min-height: auto;
   }
 }
@@ -385,6 +383,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 769px) {

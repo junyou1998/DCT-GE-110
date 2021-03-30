@@ -1,203 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="content-language" content="zh-tw" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <title>作品總覽</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/works.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="content-language" content="zh-tw">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <title>作品總覽</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/works.css" />
-    
-</head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <nav>
+                    <a class="btn" href="/">首頁</a>
+                    <a class="btn active" href="/works.html">作品總覽</a>
+                    <div class="btn">我們是誰</div>
+                    <!-- <div class="btn">歷屆展覽</div> -->
+                </nav>
+                <nav id="nav-M">
+                    <input class="hidden" type="checkbox" id="phoneNav" />
+                    <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
+                    <div class="nav-wrapper">
+                        <ul>
+                            <li><a href="/">回到首頁</a></li>
+                            <li><a href="/works.html">作品總覽</a></li>
+                            <li><a href="">我們是誰</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-<body>
-    <div id="app">
+                <div class="work-name" v-if="activeWork">{{activeWork.title}}</div>
 
-        <div class="container">
-            <nav>
-                <a class="btn" href="/">首頁</a>
-                <a class="btn active" href="/works.html">作品總覽</a>
-                <div class="btn">我們是誰</div>
-                <!-- <div class="btn">歷屆展覽</div> -->
-            </nav>
-            <nav id="nav-M">
-                <input class="hidden" type="checkbox" id="phoneNav" />
-                <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
-                <div class="nav-wrapper">
-                    <ul>
-                        <li><a href="/">回到首頁</a></li>
-                        <li><a href="/works.html">作品總覽</a></li>
-                        <li><a href="">我們是誰</a></li>
-                    </ul>
+                <div class="tags">
+                    <span>#遊戲</span>
                 </div>
-            </nav>
 
-            <div class="work-name" v-if="activeWork">
-                {{activeWork.title}}
-            </div>
-
-            <div class="tags">
-                <span>#遊戲</span>
-            </div>
-
-            <div class="silder">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(work,index) in works" @click="[handShow(), change(index)]">
-                            <img :src="work.img" alt="">
+                <div class="silder">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="(work,index) in works" @click="[handShow(), change(index)]">
+                                <img :src="work.img" alt="" />
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                <div class="frame">
+                    <div class="inner"></div>
+                </div>
             </div>
-    
-            <div class="frame">
-                <div class="inner"></div>
-            </div>
-    
-    
+
+            <transition name="fade">
+                <div class="popup" v-show="isShow">
+                    <div class="information card" v-if="activeWork">
+                        <div class="title">GALLERY</div>
+                        <div class="hr"></div>
+                        <div class="gallery">
+                            <img :src="activeWork.img" alt="" />
+                            <div class="lightbox"></div>
+                        </div>
+                        <div class="title">ABOUT</div>
+                        <div class="hr"></div>
+                        <p>{{activeWork.intro}}</p>
+
+                        <div class="title">MEMBER</div>
+                        <div class="hr"></div>
+                        <div class="members">
+                            <div class="member" v-for="member in activeWork.members">{{member.name}}</div>
+                        </div>
+                        <div class="title">LINK</div>
+                        <div class="hr"></div>
+
+                        <div class="cancel" @click="handShow">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+
+                    <div class="cancel-layer" @click="handShow"></div>
+                </div>
+            </transition>
         </div>
 
-        <transition name="fade">
-        <div class="popup" v-show="isShow" >
-            <div class="information card" v-if="activeWork">
-                <div class="title">GALLERY</div>
-                <div class="hr"></div>
-                <div class="gallery">
-                    <img :src="activeWork.img" alt="">
-                    <div class="lightbox">
-                    </div>
-                </div>
-                <div class="title">ABOUT</div>
-                <div class="hr"></div>
-                <p>{{activeWork.intro}}</p>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script> -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.global.js"
+            integrity="sha512-pE0JXcdoj253JMM1FUIyWEAX1bOp/WOZ/02C2b+QbVf4T4M5iaP0gcP28Zrmqrn2gV0Ovjn+vWnMQP2D8yyLRw=="
+            crossorigin="anonymous"
+        ></script>
+        <script>
 
-                <div class="title">MEMBER</div>
-                <div class="hr"></div>
-                <div class="members">
-                    <div class="member" v-for="member in activeWork.members">
-                        {{member.name}}
-                    </div>
-                </div>
-                <div class="title">LINK</div>
-                <div class="hr"></div>
+            // const popup = document.querySelector('.popup')
+            // const cancel = document.querySelector('.cancel')
+            // let slider = document.querySelectorAll('.swiper-slide')
+            // cancel.onclick = () => {
+            //     popup.classList.remove('display')
+            // }
+            // slider.forEach((e) => {
+            //     e.onclick = () => {
+            //         popup.classList.add('display')
+            //     }
+            // })
+            const { reactive, ref, onMounted, watch, nextTick, computed } = Vue;
+            const App = {
+                setup() {
+                    const works = ref([]);
+                    const isShow = ref(false);
+                    const index = ref(0);
 
-                <div class="cancel" @click="handShow">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-
-            <div class="cancel-layer" @click="handShow"></div>
-        </div>
-        </transition>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.global.js" integrity="sha512-pE0JXcdoj253JMM1FUIyWEAX1bOp/WOZ/02C2b+QbVf4T4M5iaP0gcP28Zrmqrn2gV0Ovjn+vWnMQP2D8yyLRw==" crossorigin="anonymous"></script>
-    <script>
-
-
-
-        // const popup = document.querySelector('.popup')
-        // const cancel = document.querySelector('.cancel')
-        // let slider = document.querySelectorAll('.swiper-slide')
-        // cancel.onclick = () => {
-        //     popup.classList.remove('display')
-        // }
-        // slider.forEach((e) => {
-        //     e.onclick = () => {
-        //         popup.classList.add('display')
-        //     }
-        // })
-        const { reactive,ref,onMounted,watch,nextTick,computed } = Vue
-        const App = {
-            setup() {
-                const works = ref([])
-                const isShow = ref(false)
-                const index = ref(0)
-
-                const activeWork = computed(()=>{
-                    return works.value[index.value]
-                })
-
-                let swiper = null;
-
-                watch(works,(newVal)=>{
-                    nextTick(()=>{
-                        swiper.update()
-
-                        swiper.on('slideChange', function() {
-
-                            index.value = swiper.realIndex
+                    const activeWork = computed(() => {
+                        return works.value[index.value];
                     });
-                    })
-                })
 
-                
+                    let swiper = null;
 
-                onMounted(() => {
-                    axios.get('/data.json')
-                        .then((res)=>{
-                            works.value = res.data
-                            console.log("------")
+                    watch(works, (newVal) => {
+                        nextTick(() => {
+                            swiper.update();
 
-                            console.log(works.value)
-                            console.log("------")
-
-                        })
-
-                    swiper = new Swiper(".swiper-container", {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                        centeredSlides: true,
-                        loop: true,
-                        grabCursor: true,
-                        navigation: {
-                            nextEl: document.querySelector(".swiper-button-next"),
-                            prevEl: document.querySelector(".swiper-button-prev"),
-                        },
-                        breakpoints: {
-                            765: {
-                                slidesPerView: 4,
-                                spaceBetween: 10,
-                            }
-                        }
+                            swiper.on("slideChange", function () {
+                                index.value = swiper.realIndex;
+                            });
+                        });
                     });
-                })
-                const handShow = () => {
-                    isShow.value = !isShow.value
-                }
 
-                const change = (idx) =>{
-                    index.value = idx
-                    swiper.slideTo(idx);
+                    onMounted(() => {
+                        axios.get("/data.json").then((res) => {
+                            works.value = res.data;
+                            console.log("------");
 
-                }
-                return {
-                    works,
-                    isShow,
-                    handShow,
-                    index,
-                    change,
-                    activeWork,
-                }
-            }
-        }
-        Vue.createApp(App).mount("#app")
-        
-    </script>
-</body>
+                            console.log(works.value);
+                            console.log("------");
+                        });
 
+                        swiper = new Swiper(".swiper-container", {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                            centeredSlides: true,
+                            loop: true,
+                            grabCursor: true,
+                            navigation: {
+                                nextEl: document.querySelector(".swiper-button-next"),
+                                prevEl: document.querySelector(".swiper-button-prev"),
+                            },
+                            breakpoints: {
+                                765: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 10,
+                                },
+                            },
+                        });
+                    });
+                    const handShow = () => {
+                        isShow.value = !isShow.value;
+                    };
+
+                    const change = (idx) => {
+                        index.value = idx;
+                        swiper.slideTo(idx);
+                    };
+                    return {
+                        works,
+                        isShow,
+                        handShow,
+                        index,
+                        change,
+                        activeWork,
+                    };
+                },
+            };
+            Vue.createApp(App).mount("#app");
+        </script>
+    </body>
 </html>
