@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="content-language" content="zh-tw">
+        <meta http-equiv="content-language" content="zh-tw" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="cache-control" content="no-cache">
-        <meta http-equiv="expires" content="0"> 
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
         <title>首頁</title>
         <link
             rel="stylesheet"
@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="style/index.css" />
     </head>
     <body>
+        <video src="ptc.mp4" muted autoplay loop></video>
+        <img src="/images/glow.png" alt="" class="glow" />
         <section class="section-1">
             <div class="container">
                 <nav>
@@ -41,7 +43,7 @@
                 </nav>
 
                 <div class="illuminate"></div>
-                <img class="logo" src="images/logo.png" alt="" />
+                <img class="logo rellax" data-rellax-speed="7" src="images/logo.png" alt="" />
                 <img src="images/digi.png" alt="" class="digi" />
                 <div class="inform">
                     <div class="recent">近期展覽 <i class="fas fa-angle-double-right"></i></div>
@@ -53,11 +55,11 @@
                 </div>
                 <div class="box-btn">活動官網<i class="fas fa-angle-double-right"></i></div>
 
-                <div class="card">
+                <!-- <div class="card">
                     <div class="title">DIGI－獨數異格</div>
                     <div class="hr"></div>
                     有遊戲、APP、網頁等12組作品展出，不僅包含了社會議題，更是有未來教育的理念，在數位科技越來越發達的現今，向世界傳達多元的數位內容。
-                </div>
+                </div> -->
                 <div class="frame"><div class="inner"></div></div>
             </div>
         </section>
@@ -146,7 +148,16 @@
             </div>
             <div class="footer"></div>
         </section>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+            integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
         <script>
             $(window).scroll(function (evt) {
                 if ($(window).scrollTop() > 0) {
@@ -157,6 +168,15 @@
                     $(".navbar").removeClass("hide");
                     $("#nav-M").removeClass("hide");
                 }
+            });
+
+            var rellax = new Rellax(".rellax", {
+                speed: -2,
+                center: false,
+                wrapper: null,
+                round: true,
+                vertical: true,
+                horizontal: false,
             });
         </script>
     </body>

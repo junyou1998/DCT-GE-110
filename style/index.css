@@ -43,11 +43,12 @@ body {
 .logo {
   position: absolute;
   width: 600px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 9999999;
 }
 
 @media screen and (max-width: 769px) {
@@ -169,13 +170,13 @@ section {
 }
 
 .section-1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#141432), color-stop(40%, #141432), to(#EB337B));
-  background: linear-gradient(#141432, #141432 40%, #EB337B);
+  background: -webkit-gradient(linear, left top, left bottom, from(#101028), color-stop(40%, #101028), to(#BA2962));
+  background: linear-gradient(#101028, #101028 40%, #BA2962);
 }
 
 .section-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#EB337B), color-stop(#141432), to(#153c43));
-  background: linear-gradient(#EB337B, #141432, #153c43);
+  background: -webkit-gradient(linear, left top, left bottom, from(#BA2962), color-stop(#101028), to(#153c43));
+  background: linear-gradient(#BA2962, #101028, #153c43);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,5 +531,28 @@ section {
 
 .shadow .text:nth-child(even) div:nth-child(11) {
   background-color: rgba(237, 102, 165, 0.165);
+}
+
+video {
+  width: 100vw;
+  mix-blend-mode: screen;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.glow {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  pointer-events: none;
 }
 /*# sourceMappingURL=index.css.map */
