@@ -182,7 +182,7 @@
         </script>
 
         <script>
-            let num = 3000;
+            let num = 500;
             var particles_a = [];
             var particles_b = [];
             var particles_c = [];
@@ -205,7 +205,7 @@
                     let loc_c = createVector(random(width * 2.9), random(height), 5);
                     let angle_c = random(TWO_PI);
                     let dir_c = createVector(cos(angle_c), sin(angle_c));
-                    let speed = random(10, 20);
+                    let speed = random(.5, 2);
                     //particles[i]= new Particle(loc, dir, speed);
                     particles_a[i] = new Particle(loc_a, dir_a, speed);
                     particles_b[i] = new Particle(loc_b, dir_b, speed);
