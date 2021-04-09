@@ -219,8 +219,13 @@ body {
         .members{
             display: flex;
             .member{
+                flex: 1;
                 margin: 0 15px;
                 font-size: 22px;
+                img{
+                    width: 100%;
+                    border-radius: 5px;
+                }
             }
         }
     }

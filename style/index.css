@@ -83,6 +83,7 @@ body {
 .inform {
   color: #fff;
   text-shadow: 0 0 20px #58B9CC;
+  z-index: 100;
 }
 
 @media screen and (max-width: 768px) {
@@ -543,7 +544,7 @@ video {
   right: 0;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  z-index: 10000;
+  z-index: 10;
   pointer-events: none;
   -o-object-fit: fill;
      object-fit: fill;
@@ -557,6 +558,15 @@ video {
   left: 0;
   right: 0;
   z-index: 10000;
+  pointer-events: none;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: .1;
   pointer-events: none;
 }
 /*# sourceMappingURL=index.css.map */

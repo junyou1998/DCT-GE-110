@@ -70,6 +70,7 @@ body {
     @media screen and(max-width: 768px) {
         padding: 0 15px;
     }
+    z-index: 100;
     .year {
         font-size: 20px;
         margin-top: 10px;
@@ -322,7 +323,7 @@ video {
     left: 0;
     right: 0;
     transform: scaleX(-1);
-    z-index: 10000;
+    z-index: 10;
     pointer-events: none;
     object-fit: fill;
   }
@@ -336,4 +337,13 @@ video {
     right: 0;
     z-index: 10000;
     pointer-events: none;
+  }
+
+  main{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      opacity: .1;
+      pointer-events: none;
   }

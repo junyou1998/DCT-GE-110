@@ -80,7 +80,10 @@
                         <div class="title">MEMBER</div>
                         <div class="hr"></div>
                         <div class="members">
-                            <div class="member" v-for="member in activeWork.members">{{member.name}}</div>
+                            <div class="member" v-for="member in activeWork.members">
+                                <img :src="member.img" alt="">
+                                {{member.name}}
+                            </div>
                         </div>
                         <div class="title">LINK</div>
                         <div class="hr"></div>
@@ -167,7 +170,9 @@
                         });
                     });
                     const handShow = () => {
+                        document.querySelector('.popup').scrollTo({top: 0, behavior: 'smooth'});
                         isShow.value = !isShow.value;
+
                     };
 
                     const change = (idx) => {
