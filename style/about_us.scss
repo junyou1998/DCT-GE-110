@@ -1,0 +1,55 @@
+@import "variable";
+.container {
+    height: 100vh;
+    position: relative;
+    padding: 30px 5% 0 5%;
+}
+.section2{
+    display: flex;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    .content{
+        flex: 1;
+        padding: 1% 0 0 5%;
+        h1{
+            letter-spacing: 15px;
+            color: white;
+            font-size: 72px;
+            font-weight: 300;
+        }
+        .hashtag{
+            color:$pink;
+            font-size: 24px;
+            padding-bottom: 8%;
+        }
+        .card{
+            width: 85%;
+            font-weight: 300;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .s_title{
+                width: 100%;
+                padding-bottom: 30px;
+                font-size: 32px;
+                
+            }
+            .text{
+                font-size: 15px;
+            }
+            .box-btn{
+                margin:20px 5px 0 0;
+            }
+        }
+    }
+    .photo{
+        flex: 2;
+        padding:5% 0 0 0;
+        img{
+            width: 90%;
+        }
+    }
+}
