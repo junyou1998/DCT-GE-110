@@ -1,7 +1,6 @@
 .container {
   height: 100vh;
   position: relative;
-  padding: 30px 5% 0 5%;
 }
 
 .section2 {
@@ -20,17 +19,26 @@
 }
 
 .section2 .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 1% 0 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .section2 .content h1 {
   letter-spacing: 15px;
   color: white;
-  font-size: 72px;
-  font-weight: 300;
+  font-size: 80px;
+  font-weight: 500;
 }
 
 .section2 .content .hashtag {
@@ -40,7 +48,6 @@
 }
 
 .section2 .content .card {
-  width: 85%;
   font-weight: 300;
   color: white;
   padding: 20px;
@@ -54,11 +61,11 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  width: 500px;
 }
 
 .section2 .content .card .s_title {
   width: 100%;
-  padding-bottom: 30px;
   font-size: 32px;
 }
 
@@ -71,13 +78,15 @@
 }
 
 .section2 .photo {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  padding: 5% 0 0 0;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin: 90px 0 0 60px;
 }
 
 .section2 .photo img {
-  width: 90%;
+  width: 95%;
+  border: solid #58B9CC 3px;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=about_us.css.map */

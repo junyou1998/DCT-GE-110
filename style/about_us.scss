@@ -2,7 +2,6 @@
 .container {
     height: 100vh;
     position: relative;
-    padding: 30px 5% 0 5%;
 }
 .section2{
     display: flex;
@@ -10,13 +9,15 @@
         flex-direction: column;
     }
     .content{
-        flex: 1;
-        padding: 1% 0 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 2;
         h1{
             letter-spacing: 15px;
             color: white;
-            font-size: 72px;
-            font-weight: 300;
+            font-size: 80px;
+            font-weight: 500;
         }
         .hashtag{
             color:$pink;
@@ -24,16 +25,16 @@
             padding-bottom: 8%;
         }
         .card{
-            width: 85%;
             font-weight: 300;
             color: white;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            width: 500px;
             .s_title{
                 width: 100%;
-                padding-bottom: 30px;
+                // padding-bottom: 30px;
                 font-size: 32px;
                 
             }
@@ -46,10 +47,13 @@
         }
     }
     .photo{
-        flex: 2;
-        padding:5% 0 0 0;
+        flex: 3;
+        margin: 90px 0 0 60px;
         img{
-            width: 90%;
+            width: 95%;
+            border: solid $blue-glow 3px;
+            border-radius: 3px;
+
         }
     }
 }
