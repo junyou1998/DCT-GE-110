@@ -33,20 +33,53 @@ body {
         font-size: 45px;
     }
 }
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .logo {
-    position: absolute;
-    width: 600px;
+    position: absolute; 
     top:0;
     right:0;
     bottom:0;
     left:0;
     margin:auto;
     z-index: 10000;
+    width: 650px;
+    height: 650px;
+    img{
+        width: 600px;
+    }
     @media screen and (max-width: 769px) {
         max-width: 85vw;
         min-height: auto;
+        img{
+            width: 100%;
+        }
+    }
+    .square{
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: circle 15s cubic-bezier(.76,0,.25,.99) infinite;
     }
 }
+
 .digi {
     position: absolute;
     left: 50%;
@@ -285,7 +318,7 @@ section {
 }
 
 
-video {
+.video {
     width: 100vw;
     height: 100vh;
     mix-blend-mode: screen;
@@ -306,7 +339,7 @@ video {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 10000;
+    z-index: 0;
     pointer-events: none;
   }
 
@@ -314,8 +347,18 @@ video {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: -1;
-      opacity: .3;
+      z-index: 100;
+    //   opacity: .3;
       pointer-events: none;
-      display: none;
+    //   display: none;
+  }
+
+  canvas{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      mix-blend-mode: screen;
+      width: 100%;
+      height: 100%;
   }
