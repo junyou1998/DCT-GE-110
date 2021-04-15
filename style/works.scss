@@ -15,7 +15,7 @@ body {
     margin: 10px 0;
     @include text-glow($pink-glow);
     @media screen and (max-width: 768px) {
-        font-size: 50px;
+        font-size: 40px;
         margin-left: 20px;
     }
 }
