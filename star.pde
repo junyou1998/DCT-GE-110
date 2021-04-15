@@ -54,7 +54,7 @@ class Star {
     
     void show() {
         //fill(235, 51, 123);
-        fill(255);
+        fill();
         noStroke();
         
         

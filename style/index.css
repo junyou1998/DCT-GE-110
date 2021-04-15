@@ -21,9 +21,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .recent i {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .recent {
     margin-top: 0;
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
@@ -37,7 +43,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .activity {
-    font-size: 45px;
+    font-size: 35px;
   }
 }
 
@@ -133,7 +139,7 @@ body {
 @media screen and (max-width: 769px) {
   .digi {
     max-width: 90vw;
-    bottom: 25px;
+    bottom: 55px;
   }
 }
 
@@ -163,7 +169,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .inform .year {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
@@ -174,7 +180,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .inform .date {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -185,7 +191,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .inform .location {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
