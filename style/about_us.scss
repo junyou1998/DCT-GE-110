@@ -1,80 +1,36 @@
 @import "variable";
-.container {
+.container{
     height: 100vh;
-    position: relative;
-}
-.section2{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        // align-items: flex-end;
-        flex: 2;
-        padding-right: 25px;
-        @media screen and (max-width: 768px) {
-            padding: 0;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        h1{
-            letter-spacing: 15px;
-            color: white;
-            font-size: 80px;
-            font-weight: 500;
-        }
-        .hashtag{
-            color:$pink;
-            font-size: 24px;
-            padding-bottom: 8%;
-        }
-        .card{
-            font-weight: 300;
-            color: white;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            width: 100%;
-            @media screen and (max-width: 768px) {
-                // width: calc(100% - 10px);
-            }
-            .s_title{
-                width: 100%;
-                // padding-bottom: 30px;
-                font-size: 32px;
-                
-            }
-            .text{
-                font-size: 15px;
-            }
-            .box-btn{
-                margin:20px 5px 0 0;
-            }
-        }
-    }
-    .photo{
-        flex: 3;
+    @media screen and (max-width: 768px){
         height: 100%;
-        display: flex;
-        // justify-content: center;
-        justify-content: flex-end;
-        align-items: center;
-        padding-left: 25px;
-        // margin: 90px 0 0 60px;
-        @media screen and (max-width: 768px) {
-            padding: 0;
-            justify-content: center;
-        }
-        img{
-            width: 95%;
-            border: solid $blue-glow 3px;
-            border-radius: 3px;
-
-        }
+        padding: 20px;
+    }
+}
+h1{
+    letter-spacing: 8px;
+    font-size: 75px;
+    font-weight: 700;
+    @media screen and (max-width: 768px){
+        font-size: 50px;
+    }
+}
+.hashtag{
+    color:$pink;
+    font-size: 18px;
+    @include text-glow($pink-glow);
+}
+.card{
+    color: white;
+    font-weight: 300;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 24px;
+    max-width: 1130px;
+    margin: auto;
+    margin-top: 60px;
+    .box-btn{
+        align-self: flex-end;
     }
 }
