@@ -106,7 +106,7 @@ body {
 @media screen and (max-width: 769px) {
   .logo {
     max-width: 85vw;
-    min-height: auto;
+    min-height: 85vw;
   }
   .logo img {
     width: 100%;
