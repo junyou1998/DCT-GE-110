@@ -15,7 +15,7 @@ body {
     margin: 10px 0;
     @include text-glow($pink-glow);
     @media screen and (max-width: 768px) {
-        font-size: 50px;
+        font-size: 40px;
         margin-left: 20px;
     }
 }
@@ -35,9 +35,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media screen and (max-width: 768px){
-        // width: 100%;
-    }
     .swiper-container {
         width: 80%;
         height: 100%;
@@ -73,7 +70,7 @@ body {
         }
     }
     &.swiper-slide-active {
-        transform: scale(.8);
+        transform: scale(.9);
         @media screen and (max-width: 768px){
             transform: scale(1);
         }
@@ -171,7 +168,7 @@ body {
             margin-bottom: 15px;
         }
         .title {
-            // margin: 10px 0 0 10px;
+            margin-top: 20px;
         }
         p {
             width: 80%;
@@ -225,6 +222,10 @@ body {
                 img{
                     width: 100%;
                     border-radius: 5px;
+                }
+                @media screen and(max-width: 768px) {
+                    margin: 0 5px;
+                    font-size: 16px;
                 }
             }
         }

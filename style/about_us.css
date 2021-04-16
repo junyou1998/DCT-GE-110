@@ -1,5 +1,6 @@
 .container {
   height: 100vh;
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 768px) {
@@ -25,24 +26,25 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-.section2 .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  padding-right: 25px;
+=======
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+    padding: 20px;
+>>>>>>> 0c3c8942edc4c15664799a49d052b1e7b6b957f4
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+<<<<<<< HEAD
   .section2 .content {
     padding: 0;
     width: 95%;
@@ -69,15 +71,30 @@
 }
 
 .section2 .content .hashtag {
-  color: #ED66A5;
-  font-size: 24px;
-  padding-bottom: 8%;
+=======
+  h1 {
+    font-size: 40px;
+  }
 }
 
+.hashtag {
+>>>>>>> 0c3c8942edc4c15664799a49d052b1e7b6b957f4
+  color: #ED66A5;
+  font-size: 18px;
+  text-shadow: 0 0 20px #EB337B;
+}
+
+<<<<<<< HEAD
 .section2 .content .card {
   font-weight: 300;
   color: #58B9CC;
   padding: 20px;
+=======
+.card {
+  color: white;
+  font-weight: 300;
+  padding: 20px 35px;
+>>>>>>> 0c3c8942edc4c15664799a49d052b1e7b6b957f4
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +102,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -147,11 +165,19 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+=======
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 24px;
+  max-width: 1130px;
+  margin: auto;
+  margin-top: 60px;
+>>>>>>> 0c3c8942edc4c15664799a49d052b1e7b6b957f4
 }
 
-.section2 .photo img {
-  width: 95%;
-  border: solid #58B9CC 3px;
-  border-radius: 3px;
+.card .box-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 /*# sourceMappingURL=about_us.css.map */
