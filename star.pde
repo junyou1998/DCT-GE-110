@@ -3,9 +3,7 @@ Star[] stars = new Star[400];
 float speed;
 
 void setup() {
-    size(1920, 1080);
-    background(0);
-
+    size(1360, 720);
 
 
     for (int i = 0; i < stars.length; i++) {
@@ -48,7 +46,7 @@ class Star {
             z = width / 2;
             x = random( - width / 2, width / 2);
             y = random( - height / 2, height / 2);
-           pz = z;
+            pz = z;
         }
     }
     
