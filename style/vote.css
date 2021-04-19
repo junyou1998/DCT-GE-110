@@ -1,0 +1,223 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+    padding: 20px;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.hashtag {
+  color: #ED66A5;
+  font-size: 18px;
+  text-shadow: 0 0 20px #EB337B;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.content .vote {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .content .vote {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.content .vote-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .content .vote-form {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.vote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.vote .player {
+  color: #76BFD0;
+  text-shadow: 0 0 5px #76BFD0;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  margin: 10px 20px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .vote .player {
+    font-size: 18px;
+  }
+}
+
+.vote .player .votes_count {
+  font-size: 16px;
+}
+
+.vote .player:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+          clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+  background-color: #76BFD0;
+}
+
+.vote .player:after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 16px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(calc(-50% - 10px), calc(-50% - 5px));
+          transform: translate(calc(-50% - 10px), calc(-50% - 5px));
+  z-index: -1;
+  -webkit-clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+          clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+  background-color: #101028;
+}
+
+.vote .player.champion, .vote .player.second {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .vote .player.champion, .vote .player.second {
+    font-size: 30px;
+  }
+}
+
+.vote .player.champion:before, .vote .player.second:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+          clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+  background-color: #fff;
+}
+
+.vote .player.champion span:after, .vote .player.second span:after {
+  content: "TOP 1";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 3;
+  color: #fff;
+  font-weight: 900;
+  font-size: 45px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  text-shadow: 0 0 10px #76BFD0;
+}
+
+.vote .player.second {
+  color: #76BFD0;
+  text-shadow: 0 0 5px #76BFD0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.vote .player.second:before {
+  background-color: #76BFD0;
+}
+
+.vote .player.second span:after {
+  content: "TOP 2";
+  color: #76BFD0;
+  text-shadow: 0 0 5px #76BFD0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #26265f;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 2px #76BFD0;
+          box-shadow: inset 0 0 2px #76BFD0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ED66A5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e5227d;
+}
+/*# sourceMappingURL=vote.css.map */

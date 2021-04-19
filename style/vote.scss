@@ -1,0 +1,168 @@
+@import "variable";
+body {
+    height: 100vh;
+}
+.container {
+    // height: 100vh;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+        height: 100%;
+        padding: 20px;
+    }
+}
+h1 {
+    letter-spacing: 8px;
+    font-size: 75px;
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+.hashtag {
+    color: $pink;
+    font-size: 18px;
+    @include text-glow($pink-glow);
+}
+.content {
+    display: flex;
+    @media screen and(max-width: 768px){
+        flex-direction: column;
+    }
+    .vote {
+        flex: 1;
+        // border: solid 2px rgba(#fff,.5);
+        padding: 15px;
+        @media screen and(max-width: 768px){
+            flex: 100%;
+        }
+    }
+    .vote-form {
+        flex: 1;
+        @media screen and(max-width: 768px){
+            flex: 100%;
+        }
+    }
+}
+
+.vote {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 600px;
+    overflow-y: scroll;
+    .player {
+        color: $blue;
+        text-shadow: 0 0 5px $blue;
+        width: 100%;
+        position: relative;
+        padding: 20px;
+        margin: 10px 20px;
+        font-size: 24px;
+        @media screen and (max-width: 768px){
+            font-size: 18px;
+        }
+        .votes_count {
+            font-size: 16px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+            background-color: $blue;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 30px);
+            height: calc(100% - 16px);
+            top: 50%;
+            left: 50%;
+            transform: translate(calc(-50% - 10px), calc(-50% - 5px));
+            z-index: -1;
+            clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+            background-color: $darkblue;
+        }
+        &.champion,
+        &.second {
+            color: #fff;
+            text-shadow: 0 0 5px #fff;
+            font-size: 40px;
+            font-weight: 700;
+            padding: 30px;
+            flex: 1;
+            margin: 20px;
+            @media screen and (max-width: 768px){
+                font-size: 30px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+                background-color: #fff;
+            }
+            span {
+                &:after {
+                    content: "TOP 1";
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    z-index: 3;
+                    color: #fff;
+                    font-weight: 900;
+                    font-size: 45px;
+                    transform: rotate(-20deg);
+                    text-shadow: 0 0 10px $blue;
+                }
+            }
+        }
+        &.second {
+            color: $blue;
+            text-shadow: 0 0 5px $blue;
+            flex: 1;
+            &:before {
+                background-color: $blue;
+            }
+            span {
+                &:after {
+                    content: "TOP 2";
+                    color: $blue;
+                    text-shadow: 0 0 5px $blue;
+                }
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lighten($darkblue,15);
+    border-radius: 8px;
+    box-shadow: inset 0 0 2px $blue; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $pink;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darken($pink,15);
+}
+

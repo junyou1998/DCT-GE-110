@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/vote.css" />
+        <title>我們是誰</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="frame">
+                <div class="inner"></div>
+            </div>
+            <nav>
+                <a class="btn" href="/">首頁</a>
+                <a class="btn" href="/works.html">作品總覽</a>
+                <a class="btn" href="/about_us.html">我們是誰</a>
+                <a class="btn" href="" target="_blank">回饋問卷</a>
+                <a class="btn active" href="/vote.html" target="_blank">人氣投票</a>
+            </nav>
+
+            <nav id="nav-M">
+                <input class="hidden" type="checkbox" id="phoneNav" />
+                <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li><a href="/">回到首頁</a></li>
+                        <li><a href="/works.html">作品總覽</a></li>
+                        <li><a href="/about_us.html">我們是誰</a></li>
+                        <li><a href="">回饋問卷</a></li>
+                        <li><a href="/vote.html">人氣投票</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>人氣投票</h1>
+            <div class="hashtag">#叫我第一名 #6強排行榜</div>
+
+            <div class="content">
+                <div class="vote" id="vote">
+                    <!-- <div class="player champion">
+                    <span></span>
+                    川流意識 
+                    <span class="votes_count">100票</span>
+                </div>
+                <div class="player second">
+                    <span></span>
+                    食節
+                    <span class="votes_count">100票</span>
+                </div>
+                <div class="player">
+                    <span>1 </span>
+                    蛙蜍相爭
+                    <span class="votes_count">100票</span>
+                </div> -->
+                </div>
+                <div class="vote-form">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9fC8SAM3Si9XmthQYU0ZHXh0rDCSLAm9tJjfPLhlvbwGzXQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script>
+            let data = [
+                {
+                    name: "Magicode",
+                    vote: 0,
+                },
+                {
+                    name: "Animals are Running",
+                    vote: 0,
+                },
+                {
+                    name: "川流意識",
+                    vote: 0,
+                },
+                {
+                    name: "聞之色變",
+                    vote: 0,
+                },
+                {
+                    name: "Eco Quest",
+                    vote: 0,
+                },
+                {
+                    name: "食節",
+                    vote: 0,
+                },
+                {
+                    name: "奈特人生",
+                    vote: 0,
+                },
+                {
+                    name: "Let_s think",
+                    vote: 0,
+                },
+                {
+                    name: "Tony Stock",
+                    vote: 0,
+                },
+                {
+                    name: "蛙蜍相爭",
+                    vote: 0,
+                },
+                {
+                    name: "Speed up",
+                    vote: 0,
+                },
+                {
+                    name: "異能",
+                    vote: 0,
+                },
+            ];
+            axios
+                .get("https://spreadsheets.google.com/feeds/list/1hFUmsBb42jj-OFdWV-Dy7Edlua2mrmJY5WDDdN5CN7Q/1/public/values?alt=json")
+                .then((e) => {
+                    console.log(e.data.feed.entry);
+                    let entry = e.data.feed.entry;
+                    for (let index = 0; index < entry.length; index++) {
+                        const element = entry[index];
+                        console.log(element.gsx$請投下您寶貴的一票.$t);
+                        let who = element.gsx$請投下您寶貴的一票.$t;
+
+                        switch (who) {
+                            case "組別一 【Magicode】":
+                                data[0].vote += 1;
+                                break;
+                            case "組別二 【Animals are Running】":
+                                data[1].vote += 1;
+                                break;
+                            case "組別三 【川流意識】":
+                                data[2].vote += 1;
+                                break;
+                            case "組別四 【聞之色變】":
+                                data[3].vote += 1;
+                                break;
+                            case "組別五 【Eco-Quest】":
+                                data[4].vote += 1;
+                                break;
+                            case "組別六 【食節】":
+                                data[5].vote += 1;
+                                break;
+                            case "組別七 【奈特人生】":
+                                data[6].vote += 1;
+                                break;
+                            case "組別八 【珍食力】":
+                                data[7].vote += 1;
+                                break;
+                            case "組別九 【Tony Stock】":
+                                data[8].vote += 1;
+                                break;
+                            case "組別十 【蛙蜍相爭】":
+                                data[9].vote += 1;
+                                break;
+                            case "組別十一 【Speed Up】":
+                                data[10].vote += 1;
+                                break;
+                            case "組別十二 【異能】":
+                                data[11].vote += 1;
+                                break;
+                        }
+                    }
+
+                    // console.table(data)
+                    let sort_data = data.sort(function (a, b) {
+                        return a.vote > b.vote ? -1 : 1;
+                    });
+                    console.table(sort_data);
+
+                    document.querySelector("#vote").innerHTML = "";
+
+                    let num = 6;
+                    if (sort_data.length <= 6) {
+                        num = sort_data.length;
+                    }
+
+                    for (let i = 0; i < num; i++) {
+                        const e = sort_data[i];
+                        if (i == 0) {
+                            document.querySelector("#vote").innerHTML += `
+                    <div class="player champion">
+                        <span></span>
+                        ${e.name}
+                        <span class="votes_count">${e.vote}票</span>
+                    </div>
+                    `;
+                        } else if (i == 1) {
+                            document.querySelector("#vote").innerHTML += `
+                    <div class="player second">
+                        <span></span>
+                        ${e.name}
+                        <span class="votes_count">${e.vote}票</span>
+                    </div>
+                    `;
+                        } else {
+                            document.querySelector("#vote").innerHTML += `
+                    <div class="player">
+                        <span>${i + 1}</span>
+                        ${e.name}
+                        <span class="votes_count">${e.vote}票</span>
+                    </div>
+                    `;
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>
