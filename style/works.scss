@@ -176,11 +176,13 @@ body {
         .gallery {
             width: 80%;
             height: 400px;
-            background-color: $blue;
+            // background-color: $blue;
             border-radius: 5px;
             overflow: hidden;
             img{
                 height: 100%;
+                border-radius: 5px;
+
             }
         }
         .cancel {

@@ -22,6 +22,11 @@ h1 {
     color: $pink;
     font-size: 18px;
     @include text-glow($pink-glow);
+    a{
+        text-decoration: none;
+        color: $blue;
+        @include text-glow($blue-glow);
+    }
 }
 .content {
     display: flex;
@@ -34,6 +39,7 @@ h1 {
         padding: 15px;
         @media screen and(max-width: 768px){
             flex: 100%;
+            margin-bottom: 50px;
         }
     }
     .vote-form {
@@ -57,6 +63,7 @@ h1 {
         padding: 20px;
         margin: 10px 20px;
         font-size: 24px;
+        white-space: nowrap;
         @media screen and (max-width: 768px){
             font-size: 18px;
         }
@@ -116,11 +123,11 @@ h1 {
                     top: -20px;
                     left: -20px;
                     z-index: 3;
-                    color: #fff;
+                    color: $pink;
                     font-weight: 900;
                     font-size: 45px;
                     transform: rotate(-20deg);
-                    text-shadow: 0 0 10px $blue;
+                    text-shadow: 0 0 5px $pink-glow;
                 }
             }
         }

@@ -27,7 +27,7 @@
                     <a class="btn" href="/">首頁</a>
                     <a class="btn active" href="/works.html">作品總覽</a>
                     <a class="btn" href="/about_us.html">我們是誰</a>
-                    <a class="btn" href="/about_us.html" target="_blank">回饋問卷</a>
+                    <a class="btn" href="">回饋問卷</a>
                     <a class="btn" href="/vote.html">人氣投票</a>
                 </nav>
         
@@ -48,7 +48,7 @@
                 <div class="work-name" v-if="activeWork">{{activeWork.title}}</div>
 
                 <div class="tags">
-                    <span>#遊戲</span>
+                    <span v-if="activeWork">#{{activeWork.type}}</span>
                 </div>
 
                 <div class="silder">
@@ -147,10 +147,10 @@
                     onMounted(() => {
                         axios.get("/data.json").then((res) => {
                             works.value = res.data;
-                            console.log("------");
+                            // console.log("------");
 
-                            console.log(works.value);
-                            console.log("------");
+                            // console.log(works.value);
+                            // console.log("------");
                         });
 
                         swiper = new Swiper(".swiper-container", {

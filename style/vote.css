@@ -31,6 +31,12 @@ h1 {
   text-shadow: 0 0 20px #EB337B;
 }
 
+.hashtag a {
+  text-decoration: none;
+  color: #76BFD0;
+  text-shadow: 0 0 20px #58B9CC;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +64,7 @@ h1 {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
+    margin-bottom: 50px;
   }
 }
 
@@ -93,6 +100,7 @@ h1 {
   padding: 20px;
   margin: 10px 20px;
   font-size: 24px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -170,12 +178,12 @@ h1 {
   top: -20px;
   left: -20px;
   z-index: 3;
-  color: #fff;
+  color: #ED66A5;
   font-weight: 900;
   font-size: 45px;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
-  text-shadow: 0 0 10px #76BFD0;
+  text-shadow: 0 0 5px #EB337B;
 }
 
 .vote .player.second {
