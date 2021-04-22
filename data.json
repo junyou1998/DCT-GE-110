@@ -96,6 +96,12 @@
             "img": "/images/works/G03/members/雅淳.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "網站",
+            "link": "https://theprojectflow.github.io"
+        }
     ]
 },{
     "title":"聞之色變",
@@ -167,6 +173,12 @@
             "name": "李奕誠",
             "img": "/images/works/G06/members/奕誠.jpg",
             "role":[""]
+        }
+    ],
+    "links":[
+        {
+            "link_name": "網站",
+            "link": "https://foodfestival.junyou.tw"
         }
     ]
 },{
