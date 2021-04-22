@@ -26,7 +26,8 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 100000;
+    z-index: 1000;
+    position: relative;
     // padding: 25px 0;
     .btn {
         margin: 0 4px;
@@ -55,7 +56,7 @@ nav {
     cursor: pointer;
     transition: 0.3s;
     text-decoration: none;
-    
+    background-color: $darkblue;
     @include glow($blue-glow);
     &:hover {
         background-color: rgba(lighten($blue, 20),.3);

@@ -2,7 +2,7 @@
     "title":"Magicode",
     "type": "跨領域類",
     "intro": "這是一款真正的運算思維遊戲。 我們的遊戲燒腦程度介於有跟沒有之間，利用「編碼」來攻擊敵人，或用各種魔法道具阻撓敵人。 再搭配數位化的遊戲說明和教學遊戲，再學不會「運算思維」就母湯囉！",
-    "img": "/images/works/G01/poster/01.jpg",
+    "img": "/images/works/G01/poster/01.png",
     "members":[
         {
             "name": "陳鴻暐",
@@ -28,6 +28,16 @@
             "name": "莊惟恩",
             "img": "/images/works/G01/members/惟恩.jpg",
             "role":[""]
+        }
+    ],
+    "links":[
+        {
+            "link_name": "test",
+            "link": "https://google.com.tw"
+        },
+        {
+            "link_name": "test2",
+            "link": "https://google.com.tw"
         }
     ]
 },{

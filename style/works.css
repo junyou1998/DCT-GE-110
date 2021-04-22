@@ -186,6 +186,7 @@ body {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   overflow-y: scroll;
+  z-index: 1001;
 }
 
 .popup .cancel-layer {
@@ -316,6 +317,29 @@ body {
     margin: 0 5px;
     font-size: 16px;
   }
+}
+
+.popup .information .links {
+  padding: 20px 0;
+}
+
+.popup .information .links .link {
+  text-decoration: none;
+  padding: 10px 25px;
+  color: #76BFD0;
+  border: solid 2px #76BFD0;
+  border-radius: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.popup .information .links .link + .link {
+  margin: 30px 20px;
+}
+
+.popup .information .links .link:hover {
+  background-color: #76BFD0;
+  color: #101028;
 }
 
 ::-webkit-scrollbar {
