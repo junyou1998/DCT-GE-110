@@ -52,8 +52,8 @@ h1{
     // top: 0;
     // left: 0;
     // position: relative;
-    animation: marquee 20s linear infinite;
-    animation-delay: 2s;
+    animation: marquee 25s linear infinite;
+    // animation-delay: 2s;
     white-space: nowrap;
     .person{
         position: relative;
@@ -118,7 +118,7 @@ h1{
 body{
     position: relative;
 }
-nav{
+#nav-D{
     position: absolute;
     top: 25px;
 

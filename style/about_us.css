@@ -72,10 +72,8 @@ h1 {
   display: flex;
   position: absolute;
   overflow: hidden;
-  -webkit-animation: marquee 20s linear infinite;
-          animation: marquee 20s linear infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation: marquee 25s linear infinite;
+          animation: marquee 25s linear infinite;
   white-space: nowrap;
 }
 
@@ -169,7 +167,7 @@ body {
   position: relative;
 }
 
-nav {
+#nav-D {
   position: absolute;
   top: 25px;
 }
