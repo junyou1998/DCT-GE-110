@@ -57,13 +57,13 @@ body {
   }
 }
 
-.swiper-wrapper {
+.silder .swiper-container .swiper-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.swiper-slide {
+.silder .swiper-container .swiper-slide {
   height: auto;
   overflow: hidden;
   border-radius: 0.5px;
@@ -87,19 +87,19 @@ body {
           box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0;
 }
 
-.swiper-slide.swiper-slide-next, .swiper-slide.swiper-slide-prev {
+.silder .swiper-container .swiper-slide.swiper-slide-next, .silder .swiper-container .swiper-slide.swiper-slide-prev {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
 }
 
 @media screen and (max-width: 768px) {
-  .swiper-slide.swiper-slide-next, .swiper-slide.swiper-slide-prev {
+  .silder .swiper-container .swiper-slide.swiper-slide-next, .silder .swiper-container .swiper-slide.swiper-slide-prev {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
 }
 
-.swiper-slide.swiper-slide-active {
+.silder .swiper-container .swiper-slide.swiper-slide-active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0, 0px 0px 20px 10px #58b9cc;
@@ -107,13 +107,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .swiper-slide.swiper-slide-active {
+  .silder .swiper-container .swiper-slide.swiper-slide-active {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
 
-.swiper-slide img {
+.silder .swiper-container .swiper-slide img {
   width: 100%;
 }
 
@@ -187,6 +187,17 @@ body {
           backdrop-filter: blur(6px);
   overflow-y: scroll;
   z-index: 1001;
+  z-index: -100;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  pointer-events: none;
+}
+
+.popup.show {
+  z-index: 1001;
+  opacity: 1;
+  pointer-events: visible;
 }
 
 .popup .cancel-layer {
@@ -233,10 +244,64 @@ body {
   width: 80%;
 }
 
-.popup .information .gallery img {
+.popup .information .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .popup .information .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.popup .information .gallery .work_img {
   width: 500px;
   max-width: 100%;
   border-radius: 5px;
+}
+
+.popup .information .gallery .gallery-swiper {
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgba(118, 191, 208, 0.1);
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup .information .gallery .gallery-swiper {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+.popup .information .gallery .gallery-swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(118, 191, 208, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup .information .gallery .gallery-swiper .swiper-slide img {
+  width: 100%;
 }
 
 .popup .information .cancel {
@@ -325,8 +390,8 @@ body {
   color: #76BFD0;
   border: solid 2px #76BFD0;
   border-radius: 50px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup .information .links .link + .link {
@@ -340,31 +405,5 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-active {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-.fade-enter-to {
-  opacity: 1;
 }
 /*# sourceMappingURL=works.css.map */

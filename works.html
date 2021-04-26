@@ -16,6 +16,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
         <link rel="stylesheet" href="style/main.css" />
         <link rel="stylesheet" href="style/works.css" />
     </head>
@@ -29,7 +30,7 @@
                     <a class="btn" href="/about_us.html">我們是誰</a>
                     <a class="btn" href="/vote.html">人氣投票</a>
                 </nav>
-        
+
                 <nav id="nav-M">
                     <input class="hidden" type="checkbox" id="phoneNav" />
                     <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
@@ -48,9 +49,8 @@
                 <div class="tags">
                     <span v-if="activeWork">#{{activeWork.type}}</span>
                 </div>
-
                 <div class="silder">
-                    <div class="swiper-container">
+                    <div class="swiper-container poster-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(work,index) in works" @click="[handShow(), change(index)]">
                                 <img :src="work.img" alt="" />
@@ -60,20 +60,27 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-
                 <div class="frame">
                     <div class="inner"></div>
                 </div>
             </div>
 
-            <transition name="fade">
                 <div class="popup" v-show="isShow">
                     <div class="information card" v-if="activeWork">
                         <div class="title">GALLERY</div>
                         <div class="hr"></div>
                         <div class="gallery">
-                            <img :src="activeWork.img" alt="" />
-                            <div class="lightbox"></div>
+                            <img class="work_img" :src="activeWork.img" alt="" />
+
+                            <div class="swiper-container gallery-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for="img in activeWork.gallery">
+                                        <img :src="img.img" alt="" />
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                         <div class="title">ABOUT</div>
                         <div class="hr"></div>
@@ -81,7 +88,7 @@
 
                         <div class="title">LINK</div>
                         <div class="hr"></div>
-                        <div class="links">
+                        <div class="links" v-if="activeWork.links">
                             <a class="link" v-for="link in activeWork.links" :href="link.link" target="_blank">{{link.link_name}}</a>
                         </div>
 
@@ -89,46 +96,35 @@
                         <div class="hr"></div>
                         <div class="members">
                             <div class="member" v-for="member in activeWork.members">
-                                <img :src="member.img" alt="">
+                                <img :src="member.img" alt="" />
                                 {{member.name}}
                             </div>
                         </div>
-                        <div class="cancel" @click="handShow">
+                        <div class="cancel" @click="cancelShow">
                             <i class="fas fa-times"></i>
                         </div>
                     </div>
 
-                    <div class="cancel-layer" @click="handShow"></div>
+                    <div class="cancel-layer" @click="cancelShow"></div>
                 </div>
-            </transition>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script> -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.global.js"
-            integrity="sha512-pE0JXcdoj253JMM1FUIyWEAX1bOp/WOZ/02C2b+QbVf4T4M5iaP0gcP28Zrmqrn2gV0Ovjn+vWnMQP2D8yyLRw=="
-            crossorigin="anonymous"
-        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script>
+        <script src="https://unpkg.com/vue3-carousel@latest"></script>
         <script>
-
-            // const popup = document.querySelector('.popup')
-            // const cancel = document.querySelector('.cancel')
-            // let slider = document.querySelectorAll('.swiper-slide')
-            // cancel.onclick = () => {
-            //     popup.classList.remove('display')
-            // }
-            // slider.forEach((e) => {
-            //     e.onclick = () => {
-            //         popup.classList.add('display')
-            //     }
-            // })
             const { reactive, ref, onMounted, watch, nextTick, computed } = Vue;
             const App = {
+                components: {
+                    Carousel: VueCarousel.Carousel,
+                    Pagination: VueCarousel.Pagination,
+                    Navigation: VueCarousel.Navigation,
+                    Slide: VueCarousel.Slide,
+                },
                 setup() {
                     const works = ref([]);
-                    const isShow = ref(false);
+                    const isShow = ref(true);
                     const index = ref(0);
 
                     const activeWork = computed(() => {
@@ -136,10 +132,13 @@
                     });
 
                     let swiper = null;
+                    let swiper2 = null;
 
                     watch(works, (newVal) => {
                         nextTick(() => {
                             swiper.update();
+                            swiper2.update();
+
 
                             swiper.on("slideChange", function () {
                                 index.value = swiper.realIndex;
@@ -147,20 +146,24 @@
                         });
                     });
 
-                    onMounted(() => {
-                        axios.get("/data.json").then((res) => {
-                            works.value = res.data;
-                            // console.log("------");
+                    watch(activeWork, (newVal) => {
 
-                            // console.log(works.value);
-                            // console.log("------");
+                        nextTick(() => {
+                            console.log('test')
+                            swiper2.update();
+                        });
+                    });
+
+                    onMounted(async function () {
+                        await axios.get("/data.json").then((res) => {
+                            works.value = res.data;
                         });
 
-                        swiper = new Swiper(".swiper-container", {
+                        swiper = new Swiper(".poster-swiper", {
                             slidesPerView: 2,
                             spaceBetween: 30,
                             centeredSlides: true,
-                            loop: true,
+                            loop: false,
                             grabCursor: true,
                             navigation: {
                                 nextEl: document.querySelector(".swiper-button-next"),
@@ -173,24 +176,55 @@
                                 },
                             },
                         });
+
+                        swiper2 = new Swiper(".gallery-swiper", {
+                            pagination: {
+                                el: ".swiper-pagination",
+                            },
+                        });
                     });
+
                     const handShow = () => {
-                        document.querySelector('.popup').scrollTo({top: 0, behavior: 'smooth'});
-                        isShow.value = !isShow.value;
-
+                        document.querySelector(".popup").scrollTo({ top: 0, behavior: "smooth" });
+                        // isShow.value = !isShow.value;
+                        document.querySelector(".popup").classList.add('show')
+                        swiper2.update();
                     };
-
+                    const cancelShow = () =>{
+                        document.querySelector(".popup").classList.remove('show')
+                        document.querySelector(".popup").scrollTo({ top: 0, behavior: "smooth" });
+                    }
                     const change = (idx) => {
                         index.value = idx;
                         swiper.slideTo(idx);
+                        swiper2.update();
                     };
                     return {
                         works,
                         isShow,
                         handShow,
+                        cancelShow,
                         index,
                         change,
                         activeWork,
+                        // settings: {
+                        //     itemsToShow: 1,
+                        //     snapAlign: "center",
+                        // },
+                        // breakpoints are mobile first
+                        // any settings not specified will fallback to the carousel settings
+                        // breakpoints: {
+                        //     // 700px and up
+                        //     700: {
+                        //         itemsToShow: 1,
+                        //         snapAlign: "center",
+                        //     },
+                        //     // 1024 and up
+                        //     1024: {
+                        //         itemsToShow: 2,
+                        //         snapAlign: "start",
+                        //     },
+                        // },
                     };
                 },
             };
