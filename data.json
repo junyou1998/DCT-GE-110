@@ -78,6 +78,12 @@
             "img": "/images/works/G02/members/佳樺.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "影片",
+            "link": "https://youtu.be/ZzB-ov0nCYQ"
+        }
     ]
 
 },{
@@ -361,6 +367,12 @@
             "name": "劉開允",
             "img": "/images/works/G10/members/開允.jpg",
             "role":[""]
+        }
+    ],
+    "links":[
+        {
+            "link_name": "影片",
+            "link": "https://youtu.be/S86DOPd1Czo"
         }
     ]
 },{

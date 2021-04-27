@@ -65,53 +65,55 @@
                 </div>
             </div>
 
-                <div class="popup" v-show="isShow">
-                    <div class="information card" v-if="activeWork">
-                        <div class="title">GALLERY</div>
-                        <div class="hr"></div>
-                        <div class="gallery">
-                            
-
-                            <div class="swiper-container gallery-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img class="work_img" :src="activeWork.img" alt="" />
-                                    </div>
-                                    <div class="swiper-slide" v-for="img in activeWork.gallery">
-                                        <img :src="img.img" alt="" />
-                                    </div>
+            <div class="popup" v-show="isShow">
+                <div class="information card" v-if="activeWork">
+                    <div class="title">GALLERY</div>
+                    <div class="hr"></div>
+                    <div class="gallery">
+                        <div class="swiper-container gallery-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="work_img" :src="activeWork.img" alt="" />
                                 </div>
-
-                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide" v-for="img in activeWork.gallery">
+                                    <img :src="img.img" alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="title">ABOUT</div>
-                        <div class="hr"></div>
-                        <p>{{activeWork.intro}}</p>
 
-                        <div class="title">LINK</div>
-                        <div class="hr"></div>
-                        <div class="links" v-if="activeWork.links">
-                            <a class="link" v-for="link in activeWork.links" :href="link.link" target="_blank">{{link.link_name}}</a>
-                        </div>
-
-                        <div class="title">MEMBER</div>
-                        <div class="hr"></div>
-                        <div class="members">
-                            <div class="member" v-for="member in activeWork.members">
-                                <img :src="member.img" alt="" />
-                                {{member.name}}
-                            </div>
-                        </div>
-                        <div class="cancel" @click="cancelShow">
-                            <i class="fas fa-times"></i>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
+                    <div class="title">ABOUT</div>
+                    <div class="hr"></div>
+                    <p>{{activeWork.intro}}</p>
 
-                    <div class="cancel-layer" @click="cancelShow"></div>
+                    <div class="title">LINK</div>
+                    <div class="hr"></div>
+                    <div class="links" v-if="activeWork.links">
+                        <a class="link" v-for="link in activeWork.links" :href="link.link" target="_blank">{{link.link_name}}</a>
+                    </div>
+
+                    <div class="title">MEMBER</div>
+                    <div class="hr"></div>
+                    <div class="members">
+                        <div class="member" v-for="member in activeWork.members">
+                            <img :src="member.img" alt="" />
+                            {{member.name}}
+                        </div>
+                    </div>
+                    <div class="cancel" @click="cancelShow">
+                        <i class="fas fa-times"></i>
+                    </div>
                 </div>
-        </div>
 
+                <div class="cancel-layer" @click="cancelShow"></div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2021 國立臺中教育大學數位內容科技學系
+            <div class="div break"></div>
+            網頁由110級畢籌多媒體團隊建置
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.7/vue.global.js"></script>
@@ -142,7 +144,6 @@
                             swiper.update();
                             swiper2.update();
 
-
                             swiper.on("slideChange", function () {
                                 index.value = swiper.realIndex;
                             });
@@ -150,9 +151,8 @@
                     });
 
                     watch(activeWork, (newVal) => {
-
                         nextTick(() => {
-                            console.log('test')
+                            console.log("test");
                             swiper2.update();
                         });
                     });
@@ -190,15 +190,15 @@
                     const handShow = () => {
                         document.querySelector(".popup").scrollTo({ top: 0, behavior: "smooth" });
                         // isShow.value = !isShow.value;
-                        document.querySelector(".popup").classList.add('show')
+                        document.querySelector(".popup").classList.add("show");
                         swiper2.update();
                     };
-                    const cancelShow = () =>{
-                        document.querySelector(".popup").classList.remove('show')
+                    const cancelShow = () => {
+                        document.querySelector(".popup").classList.remove("show");
                         document.querySelector(".popup").scrollTo({ top: 0, behavior: "smooth" });
 
                         swiper2.slideTo(0);
-                    }
+                    };
                     const change = (idx) => {
                         index.value = idx;
                         swiper.slideTo(idx);

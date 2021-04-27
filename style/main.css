@@ -59,6 +59,32 @@ nav .btn {
   }
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+
+.footer .break {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .break {
+    display: block;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 2px 35px;

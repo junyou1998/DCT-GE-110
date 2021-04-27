@@ -59,6 +59,9 @@ body {
             transition: 0.5s;
             transform: scale(0.5);
             box-shadow: inset 0px 0px 15px 2px rgba(darken($blue, 20), 1), 0px 0px 0px 8px rgba(lighten($blue-glow, 30), 1);
+            @media screen and (max-width: 768px) {
+                box-shadow: inset 0px 0px 15px 2px rgba(darken($blue, 20), 1), 0px 0px 0px 5px rgba(lighten($blue-glow, 30), 1);
+            }
             &.swiper-slide-next,
             &.swiper-slide-prev {
                 transform: scale(0.6);
@@ -69,7 +72,8 @@ body {
             &.swiper-slide-active {
                 transform: scale(0.9);
                 @media screen and (max-width: 768px) {
-                    transform: scale(1);
+                    box-shadow: inset 0px 0px 15px 2px rgba(darken($blue, 20), 1), 0px 0px 0px 5px rgba(lighten($blue-glow, 30), 1),
+                    0px 0px 20px 10px rgba($blue-glow, 1);
                 }
                 box-shadow: inset 0px 0px 15px 2px rgba(darken($blue, 20), 1), 0px 0px 0px 8px rgba(lighten($blue-glow, 30), 1),
                     0px 0px 20px 10px rgba($blue-glow, 1);
@@ -291,4 +295,8 @@ body {
 }
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+.footer{
+    color: rgba(#fff,.8);
 }

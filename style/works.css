@@ -87,6 +87,13 @@ body {
           box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 8px #cdeaf0;
 }
 
+@media screen and (max-width: 768px) {
+  .silder .swiper-container .swiper-slide {
+    -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 5px #cdeaf0;
+            box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 5px #cdeaf0;
+  }
+}
+
 .silder .swiper-container .swiper-slide.swiper-slide-next, .silder .swiper-container .swiper-slide.swiper-slide-prev {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
@@ -108,8 +115,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .silder .swiper-container .swiper-slide.swiper-slide-active {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 5px #cdeaf0, 0px 0px 20px 10px #58b9cc;
+            box-shadow: inset 0px 0px 15px 2px #3992a7, 0px 0px 0px 5px #cdeaf0, 0px 0px 20px 10px #58b9cc;
   }
 }
 
@@ -417,5 +424,9 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.8);
 }
 /*# sourceMappingURL=works.css.map */
