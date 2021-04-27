@@ -40,6 +40,12 @@
             "img": "/images/works/G01/members/惟恩.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "影片",
+            "link": "https://www.youtube.com/watch?v=JNWsy5x_-wY"
+        }
     ]
 },{
     "title":"Animals are Running",
@@ -202,6 +208,13 @@
             "role":[""]
         }
     ]
+    ,
+    "links":[
+        {
+            "link_name": "影片",
+            "link": "https://youtu.be/1fbFF_0ykQ4"
+        }
+    ]
 },{
     "title":"食節",
     "type": "行動應用組",
@@ -209,10 +222,13 @@
     "img": "/images/works/G06/poster/06.png",
     "gallery":[
         {
-            "img": "images/works/G03/gallery/川流意識_遊玩畫面01.JPG"
+            "img": "images/works/G06/gallery/首頁_mockup.png"
         },
         {
-            "img": "images/works/G03/gallery/川流意識_實際畫面.png"
+            "img": "images/works/G06/gallery/介紹頁面_mockup.png"
+        },
+        {
+            "img": "images/works/G06/gallery/手機介紹頁.png"
         }
     ],
     "members":[
