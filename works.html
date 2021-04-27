@@ -70,10 +70,13 @@
                         <div class="title">GALLERY</div>
                         <div class="hr"></div>
                         <div class="gallery">
-                            <img class="work_img" :src="activeWork.img" alt="" />
+                            
 
                             <div class="swiper-container gallery-swiper">
                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="work_img" :src="activeWork.img" alt="" />
+                                    </div>
                                     <div class="swiper-slide" v-for="img in activeWork.gallery">
                                         <img :src="img.img" alt="" />
                                     </div>
@@ -193,6 +196,8 @@
                     const cancelShow = () =>{
                         document.querySelector(".popup").classList.remove('show')
                         document.querySelector(".popup").scrollTo({ top: 0, behavior: "smooth" });
+
+                        swiper2.slideTo(0);
                     }
                     const change = (idx) => {
                         index.value = idx;
