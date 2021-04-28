@@ -176,3 +176,9 @@ h1 {
 .footer{
     color: rgba(#fff,.8);
 }
+
+.vote_time{
+    color: #fff;
+    font-size: 22px;
+    @include text-glow($pink-glow);
+}

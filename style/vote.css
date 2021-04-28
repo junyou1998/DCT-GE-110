@@ -232,4 +232,10 @@ h1 {
 .footer {
   color: rgba(255, 255, 255, 0.8);
 }
+
+.vote_time {
+  color: #fff;
+  font-size: 22px;
+  text-shadow: 0 0 20px #EB337B;
+}
 /*# sourceMappingURL=vote.css.map */
