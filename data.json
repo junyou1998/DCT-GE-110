@@ -283,6 +283,12 @@
             "img": "/images/works/G07/members/脩硯.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "網站",
+            "link": "https://blachalk.github.io/NetLifeV2/"
+        }
     ]
 },{
     "title":"珍食力",
