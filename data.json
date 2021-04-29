@@ -361,6 +361,12 @@
             "img": "/images/works/G09/members/硯白.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "FB",
+            "link": "https://www.facebook.com/TonyStockBecomeRich"
+        }
     ]
 },{
     "title":"蛙蜍相爭",
@@ -432,6 +438,12 @@
             "name": "崔彥中",
             "img": "/images/works/G11/members/彥中.jpg",
             "role":[""]
+        }
+    ],
+    "links":[
+        {
+            "link_name": "影片",
+            "link": "https://www.youtube.com/watch?v=N16MG-nkN7E"
         }
     ]
 },{
