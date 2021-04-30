@@ -89,6 +89,9 @@
         {
             "link_name": "影片",
             "link": "https://youtu.be/ZzB-ov0nCYQ"
+        },{
+            "link_name": "APP",
+            "link": "https://drive.google.com/drive/folders/1GXIOpde-XWpmc_gHRlvUZlaU_0lLHtWY"
         }
     ]
 
@@ -172,6 +175,15 @@
             "img": "/images/works/G04/members/李威.jpg",
             "role":[""]
         }
+    ],
+    "links":[
+        {
+            "link_name": "影片1",
+            "link": "https://youtu.be/j8rzvAE4d8Y"
+        },{
+            "link_name": "影片2",
+            "link": "https://youtu.be/_p11zQBYy6g"
+        }
     ]
 },{
     "title":"Eco Quest",
@@ -207,12 +219,14 @@
             "img": "/images/works/G05/members/伊恬.jpg",
             "role":[""]
         }
-    ]
-    ,
+    ],
     "links":[
         {
             "link_name": "影片",
             "link": "https://youtu.be/1fbFF_0ykQ4"
+        },{
+            "link_name": "APP",
+            "link": "https://play.google.com/store/apps/details?id=com.NTCUDCT.EcoQuest"
         }
     ]
 },{
@@ -263,10 +277,13 @@
     "img": "/images/works/G07/poster/07.png",
     "gallery":[
         {
-            "img": "images/works/G03/gallery/川流意識_遊玩畫面01.JPG"
+            "img": "images/works/G07/gallery/奈特人生_識別系統設計02.jpg"
         },
         {
-            "img": "images/works/G03/gallery/川流意識_實際畫面.png"
+            "img": "images/works/G07/gallery/奈特人生_識別系統設計04.jpg"
+        },
+        {
+            "img": "images/works/G07/gallery/奈特人生_識別系統設計06.jpg"
         }
     ],
     "members":[
