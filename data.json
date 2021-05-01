@@ -49,7 +49,7 @@
     ]
 },{
     "title":"Animals are Running",
-    "type": "遊戲類",
+    "type": "跨領域類",
     "intro": "Animals are Running是一款結合AR擴增實境APP的互動繪本。 主角包含臺灣黑熊、綠蠵龜、臺灣狐蝠等代表陸海空領域的保育類動物，藉由故事描述及遊戲體驗，闡述動物們瀕臨絕種的原因，並呼籲人們應保護臺灣的物種多樣性。",
     "img": "/images/works/G02/poster/02.png",
     "gallery":[
@@ -178,6 +178,9 @@
     ],
     "links":[
         {
+            "link_name": "APP",
+            "link": "https://play.google.com/store/apps/details?id=appinventor.ai_adt106111.ColorRivalry"
+        },{
             "link_name": "影片1",
             "link": "https://youtu.be/j8rzvAE4d8Y"
         },{
