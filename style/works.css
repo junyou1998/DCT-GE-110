@@ -249,6 +249,13 @@ body {
 
 .popup .information p {
   width: 80%;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .popup .information p {
+    width: 100%;
+  }
 }
 
 .popup .information .gallery {
@@ -306,7 +313,6 @@ body {
 .popup .information .gallery .gallery-swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-color: rgba(118, 191, 208, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,7 +389,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  margin: 0 15px;
+  margin: 0 15px 25px;
   font-size: 22px;
 }
 
@@ -394,7 +400,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .popup .information .members .member {
-    margin: 0 5px;
+    margin: 0 5px 15px;
     font-size: 16px;
   }
 }
@@ -411,10 +417,15 @@ body {
   border-radius: 50px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin: 30px 20px 30px 0;
 }
 
-.popup .information .links .link + .link {
-  margin: 30px 20px;
+@media screen and (max-width: 768px) {
+  .popup .information .links .link {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin: 20px 20px 20px 0;
+  }
 }
 
 .popup .information .links .link:hover {
