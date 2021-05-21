@@ -2,7 +2,7 @@
     "title":"Magicode",
     "type": "跨領域類",
     "intro": "這是一款真正的運算思維遊戲。 我們的遊戲燒腦程度介於有跟沒有之間，利用「編碼」來攻擊敵人，或用各種魔法道具阻撓敵人。 再搭配數位化的遊戲說明和教學遊戲，再學不會「運算思維」就母湯囉！",
-    "img": "/images/works/G01/poster/01.png",
+    "img": "images/works/G01/poster/01.png",
     "gallery":[
         {
             "img": "images/works/G01/gallery/Magicode_展示圖.png"
@@ -17,27 +17,27 @@
     "members":[
         {
             "name": "陳鴻暐",
-            "img": "/images/works/G01/members/鴻暐.jpg",
+            "img": "images/works/G01/members/鴻暐.jpg",
             "role":[""]
         },
         {
             "name": "魏瀅珊",
-            "img": "/images/works/G01/members/瀅珊.jpg",
+            "img": "images/works/G01/members/瀅珊.jpg",
             "role":[""]
         },
         {
             "name": "劉芷維",
-            "img": "/images/works/G01/members/芷維.jpg",
+            "img": "images/works/G01/members/芷維.jpg",
             "role":[""]
         },
         {
             "name": "王峻哲",
-            "img": "/images/works/G01/members/峻哲.jpg",
+            "img": "images/works/G01/members/峻哲.jpg",
             "role":[""]
         },
         {
             "name": "莊惟恩",
-            "img": "/images/works/G01/members/惟恩.jpg",
+            "img": "images/works/G01/members/惟恩.jpg",
             "role":[""]
         }
     ],
@@ -51,7 +51,7 @@
     "title":"Animals are Running",
     "type": "跨領域類",
     "intro": "Animals are Running是一款結合AR擴增實境APP的互動繪本。 主角包含臺灣黑熊、綠蠵龜、臺灣狐蝠等代表陸海空領域的保育類動物，藉由故事描述及遊戲體驗，闡述動物們瀕臨絕種的原因，並呼籲人們應保護臺灣的物種多樣性。",
-    "img": "/images/works/G02/poster/02.png",
+    "img": "images/works/G02/poster/02.png",
     "gallery":[
         {
             "img": "images/works/G02/gallery/08_繪本畫面.jpg"
@@ -66,22 +66,22 @@
     "members":[
         {
             "name": "蔡文琪",
-            "img": "/images/works/G02/members/文琪.jpg",
+            "img": "images/works/G02/members/文琪.jpg",
             "role":[""]
         },
         {
             "name": "黃郁芳",
-            "img": "/images/works/G02/members/郁芳.jpg",
+            "img": "images/works/G02/members/郁芳.jpg",
             "role":[""]
         },
         {
             "name": "蔡佳容",
-            "img": "/images/works/G02/members/佳容.jpg",
+            "img": "images/works/G02/members/佳容.jpg",
             "role":[""]
         },
         {
             "name": "林佳樺",
-            "img": "/images/works/G02/members/佳樺.jpg",
+            "img": "images/works/G02/members/佳樺.jpg",
             "role":[""]
         }
     ],
@@ -99,7 +99,7 @@
     "title":"川流意識",
     "type": "跨領域類",
     "intro": "述說魚類與河流環境的連結，藉由擴增實境融入數位互動桌遊中，期望國小高年級學生在情境式學習的輔助，了解臺灣川流生態、各物種之間和環境因子共同組織出錯綜複雜的關聯性，進而懂得保護河川生態，形成川流生態之意識流。",
-    "img": "/images/works/G03/poster/03.png",
+    "img": "images/works/G03/poster/03.png",
     "gallery":[
         {
             "img": "images/works/G03/gallery/川流意識_實際畫面.png"
@@ -114,24 +114,24 @@
     "members":[
         {
             "name": "曾東嶸",
-            "img": "/images/works/G03/members/東嶸.jpg",
+            "img": "images/works/G03/members/東嶸.jpg",
             "role":[""]
         },{
             "name": "鄭羽涵",
-            "img": "/images/works/G03/members/羽涵.jpg",
+            "img": "images/works/G03/members/羽涵.jpg",
             "role":[""]
         },{
             "name": "王運毅",
-            "img": "/images/works/G03/members/運毅.jpg",
+            "img": "images/works/G03/members/運毅.jpg",
             "role":[""]
         },{
             "name": "彭筱晴",
-            "img": "/images/works/G03/members/筱晴.jpg",
+            "img": "images/works/G03/members/筱晴.jpg",
             "role":[""]
         }
         ,{
             "name": "胡雅淳",
-            "img": "/images/works/G03/members/雅淳.jpg",
+            "img": "images/works/G03/members/雅淳.jpg",
             "role":[""]
         }
     ],
@@ -145,7 +145,7 @@
     "title":"聞之色變",
     "type": "跨領域類",
     "intro": "「聞之色變」是款以提高有利於己方陣營新聞熱度為手段，並藉此獲得最高總分取勝的桌上遊戲。 玩家藉由熱度及功能卡改變新聞的熱度，並善用言語與行為來誤導及混淆對手，創造陣營影響力最大化的局面並贏得遊戲的勝利。",
-    "img": "/images/works/G04/poster/04.png",
+    "img": "images/works/G04/poster/04.png",
     "gallery":[
         {
             "img": "images/works/G04/gallery/1.jpg"
@@ -160,19 +160,19 @@
     "members":[
         {
             "name": "周家禾",
-            "img": "/images/works/G04/members/家禾.jpg",
+            "img": "images/works/G04/members/家禾.jpg",
             "role":[""]
         },{
             "name": "葉洵嘉",
-            "img": "/images/works/G04/members/洵嘉.jpg",
+            "img": "images/works/G04/members/洵嘉.jpg",
             "role":[""]
         },{
             "name": "林子涵",
-            "img": "/images/works/G04/members/子涵.jpg",
+            "img": "images/works/G04/members/子涵.jpg",
             "role":[""]
         },{
             "name": "李威",
-            "img": "/images/works/G04/members/李威.jpg",
+            "img": "images/works/G04/members/李威.jpg",
             "role":[""]
         }
     ],
@@ -192,7 +192,7 @@
     "title":"Eco Quest",
     "type": "跨領域類",
     "intro": "草原上的戰爭，如火如荼的進行著， 動物之間，爾虞我詐，只為了能在這遼闊的草原上生存下去， 《Eco Quest》將帶領你們，用輕鬆、益智的遊玩方式，了解大自然的奧妙。",
-    "img": "/images/works/G05/poster/05.jpg",
+    "img": "images/works/G05/poster/05.jpg",
     "gallery":[
         {
             "img": "images/works/G05/gallery/Eco Quest_app.jpg"
@@ -207,19 +207,19 @@
     "members":[
         {
             "name": "楊筑鈞",
-            "img": "/images/works/G05/members/筑鈞.jpg",
+            "img": "images/works/G05/members/筑鈞.jpg",
             "role":[""]
         },{
             "name": "黃詩予",
-            "img": "/images/works/G05/members/詩予.jpg",
+            "img": "images/works/G05/members/詩予.jpg",
             "role":[""]
         },{
             "name": "洪以昕",
-            "img": "/images/works/G05/members/以昕.jpg",
+            "img": "images/works/G05/members/以昕.jpg",
             "role":[""]
         },{
             "name": "鄭伊恬",
-            "img": "/images/works/G05/members/伊恬.jpg",
+            "img": "images/works/G05/members/伊恬.jpg",
             "role":[""]
         }
     ],
@@ -236,7 +236,7 @@
     "title":"食節",
     "type": "行動應用組",
     "intro": "你知道中秋節為何要吃月餅嗎？ 知道過年吃的年糕居然是曾是磚頭嗎？ 「食節」除了收錄了各個節慶的小故事，還有各種傳統食物的冷知識、以及有趣的小知識，一應俱全，快使用「食節」讓你一邊過節日一邊增加知識吧!",
-    "img": "/images/works/G06/poster/06.png",
+    "img": "images/works/G06/poster/06.png",
     "gallery":[
         {
             "img": "images/works/G06/gallery/首頁_mockup.png"
@@ -251,19 +251,19 @@
     "members":[
         {
             "name": "陳俊佑",
-            "img": "/images/works/G06/members/俊佑.jpg",
+            "img": "images/works/G06/members/俊佑.jpg",
             "role":[""]
         },{
             "name": "蕭淳嚴",
-            "img": "/images/works/G06/members/淳嚴.jpg",
+            "img": "images/works/G06/members/淳嚴.jpg",
             "role":[""]
         },{
             "name": "吳東亮",
-            "img": "/images/works/G06/members/東亮.jpg",
+            "img": "images/works/G06/members/東亮.jpg",
             "role":[""]
         },{
             "name": "李奕誠",
-            "img": "/images/works/G06/members/奕誠.jpg",
+            "img": "images/works/G06/members/奕誠.jpg",
             "role":[""]
         }
     ],
@@ -277,7 +277,7 @@
     "title":"奈特人生",
     "type": "行動應用組",
     "intro": "《奈特人生》是一個提倡『數位健康』的網站。隨著網路普及率增加，國人漸漸習慣使用網路解決問題，造成身心和社會的嚴重負擔。希望藉由專題宣導，讓民眾獲得網路與現實之間取得平衡的完整資訊與解決方法。",
-    "img": "/images/works/G07/poster/07.png",
+    "img": "images/works/G07/poster/07.png",
     "gallery":[
         {
             "img": "images/works/G07/gallery/奈特人生_識別系統設計02.jpg"
@@ -292,15 +292,15 @@
     "members":[
         {
             "name": "林佑蓉",
-            "img": "/images/works/G07/members/佑蓉.jpg",
+            "img": "images/works/G07/members/佑蓉.jpg",
             "role":[""]
         },{
             "name": "王功彥",
-            "img": "/images/works/G07/members/功彥.jpg",
+            "img": "images/works/G07/members/功彥.jpg",
             "role":[""]
         },{
             "name": "方脩硯",
-            "img": "/images/works/G07/members/脩硯.jpg",
+            "img": "images/works/G07/members/脩硯.jpg",
             "role":[""]
         }
     ],
@@ -317,7 +317,7 @@
     "title":"珍食力",
     "type": "行動應用組",
     "intro": "珍食力是以「掌握自我食量」為主的APP，透過篩選符合食量的餐點或店家、客製化食譜的食材，達到理性消費、預防剩食的目的。1.將你的拳頭換算成ml數，評估食量2.客製化食譜的食材份量，合理規劃每一餐3.店家餐點資訊與評論一目瞭然",
-    "img": "/images/works/G08/poster/08.png",
+    "img": "images/works/G08/poster/08.png",
     "gallery":[
         {
             "img": "images/works/G08/gallery/網站照片_珍食力01.png"
@@ -332,15 +332,15 @@
     "members":[
         {
             "name": "陳子涵",
-            "img": "/images/works/G08/members/子涵.jpg",
+            "img": "images/works/G08/members/子涵.jpg",
             "role":[""]
         },{
             "name": "彭如霈",
-            "img": "/images/works/G08/members/如霈.jpg",
+            "img": "images/works/G08/members/如霈.jpg",
             "role":[""]
         },{
             "name": "黃麟貴",
-            "img": "/images/works/G08/members/麟貴.jpg",
+            "img": "images/works/G08/members/麟貴.jpg",
             "role":[""]
         }
     ],
@@ -354,7 +354,7 @@
     "title":"Tony Stock",
     "type": "行動應用組",
     "intro": "畢業生起薪偏低，生活開銷逐漸變大。面對低利率時代的來臨，銀行定存利率屢創新低，投資理財顯得格外重要。 本專題研究以台灣股市為主軸，希望使用數位科技找出適合的策略，提高報酬並承擔相對低的風險，藉此提高大家的生活品質。",
-    "img": "/images/works/G09/poster/09.jpg",
+    "img": "images/works/G09/poster/09.jpg",
     "gallery":[
         {
             "img": "images/works/G09/gallery/Tony Stock_01.png"
@@ -369,19 +369,19 @@
     "members":[
         {
             "name": "田敬瑄",
-            "img": "/images/works/G09/members/敬瑄.jpg",
+            "img": "images/works/G09/members/敬瑄.jpg",
             "role":[""]
         },{
             "name": "劉維",
-            "img": "/images/works/G09/members/劉維.jpg",
+            "img": "images/works/G09/members/劉維.jpg",
             "role":[""]
         },{
             "name": "曾郁琪",
-            "img": "/images/works/G09/members/郁琪.jpg",
+            "img": "images/works/G09/members/郁琪.jpg",
             "role":[""]
         },{
             "name": "黃硯白",
-            "img": "/images/works/G09/members/硯白.jpg",
+            "img": "images/works/G09/members/硯白.jpg",
             "role":[""]
         }
     ],
@@ -395,7 +395,7 @@
     "title":"蛙蜍相爭",
     "type": "遊戲類",
     "intro": "以大家耳熟能詳的遊戲貪吃蛇為藍本，本專題除了將其改為雙人遊戲外也加入了許多元素，一方扮演青蛙，另一方則扮演蟾蜍，為了獲得更多的食物，勢不兩立的牠們的戰役就此展開。",
-    "img": "/images/works/G10/poster/10.png",
+    "img": "images/works/G10/poster/10.png",
     "gallery":[
         {
             "img": "images/works/G10/gallery/1.jpg"
@@ -410,19 +410,19 @@
     "members":[
         {
             "name": "謝青芫",
-            "img": "/images/works/G10/members/青芫.jpg",
+            "img": "images/works/G10/members/青芫.jpg",
             "role":[""]
         },{
             "name": "吳沅騏",
-            "img": "/images/works/G10/members/沅騏.jpg",
+            "img": "images/works/G10/members/沅騏.jpg",
             "role":[""]
         },{
             "name": "詹秉融",
-            "img": "/images/works/G10/members/秉融.jpg",
+            "img": "images/works/G10/members/秉融.jpg",
             "role":[""]
         },{
             "name": "劉開允",
-            "img": "/images/works/G10/members/開允.jpg",
+            "img": "images/works/G10/members/開允.jpg",
             "role":[""]
         }
     ],
@@ -436,7 +436,7 @@
     "title":"Speed up",
     "type": "遊戲類",
     "intro": "在看動作片電影時，看到主角爬上爬下，展現各種跑酷技術來完成任務或是追趕敵人， 讓人幻想自己能像主角一樣帥氣，想體驗跑酷卻又害怕危險的玩家，能透過這款遊戲認識跑酷這項運動， 讓我們跟著節奏跑起來，不間斷的跑下去。",
-    "img": "/images/works/G11/poster/11.png",
+    "img": "images/works/G11/poster/11.png",
     "gallery":[
         {
             "img": "images/works/G11/gallery/主畫面.png"
@@ -451,15 +451,15 @@
     "members":[
         {
             "name": "王泰鈞",
-            "img": "/images/works/G11/members/泰鈞.jpg",
+            "img": "images/works/G11/members/泰鈞.jpg",
             "role":[""]
         },{
             "name": "陳柏崴",
-            "img": "/images/works/G11/members/柏崴.jpg",
+            "img": "images/works/G11/members/柏崴.jpg",
             "role":[""]
         },{
             "name": "崔彥中",
-            "img": "/images/works/G11/members/彥中.jpg",
+            "img": "images/works/G11/members/彥中.jpg",
             "role":[""]
         }
     ],
@@ -473,7 +473,7 @@
     "title":"異能",
     "type": "遊戲類",
     "intro": "起初風平浪靜的國家，因為一次意外而產生了劇烈變化... 當今天有人告訴你你所認知的事實並非真實時，你會做出甚麼抉擇？ 3D即時動作劇情遊戲， 藉由劇情中個別角色持有的「匣子」以及「異能」，尋找出被隱藏的真實。",
-    "img": "/images/works/G12/poster/12.jpg",
+    "img": "images/works/G12/poster/12.jpg",
     "gallery":[
         {
             "img": "images/works/G12/gallery/2021_04_27_1.png"
@@ -488,23 +488,23 @@
     "members":[
         {
             "name": "趙哲霆",
-            "img": "/images/works/G12/members/哲霆.jpg",
+            "img": "images/works/G12/members/哲霆.jpg",
             "role":[""]
         },{
             "name": "趙奕勛",
-            "img": "/images/works/G12/members/奕勛.jpg",
+            "img": "images/works/G12/members/奕勛.jpg",
             "role":[""]
         },{
             "name": "林子喻",
-            "img": "/images/works/G12/members/子喻.jpg",
+            "img": "images/works/G12/members/子喻.jpg",
             "role":[""]
         },{
             "name": "林家民",
-            "img": "/images/works/G12/members/家民.jpg",
+            "img": "images/works/G12/members/家民.jpg",
             "role":[""]
         },{
             "name": "謝峻晏",
-            "img": "/images/works/G12/members/峻晏.jpg",
+            "img": "images/works/G12/members/峻晏.jpg",
             "role":[""]
         }
     ],
