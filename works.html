@@ -25,10 +25,10 @@
         <div id="app">
             <div class="container">
                 <nav>
-                    <a class="btn" href="/">首頁</a>
-                    <a class="btn active" href="/works.html">作品總覽</a>
-                    <a class="btn" href="/about_us.html">我們是誰</a>
-                    <a class="btn" href="/vote.html">人氣投票</a>
+                    <a class="btn" href="">首頁</a>
+                    <a class="btn active" href="works.html">作品總覽</a>
+                    <a class="btn" href="about_us.html">我們是誰</a>
+                    <a class="btn" href="vote.html">人氣投票</a>
                 </nav>
 
                 <nav id="nav-M">
@@ -36,10 +36,10 @@
                     <label class="navBtn" for="phoneNav"><i></i><i></i><i></i></label>
                     <div class="nav-wrapper">
                         <ul>
-                            <li><a href="/">回到首頁</a></li>
-                            <li><a href="/works.html">作品總覽</a></li>
-                            <li><a href="/about_us.html">我們是誰</a></li>
-                            <li><a href="/vote.html">人氣投票</a></li>
+                            <li><a href="">回到首頁</a></li>
+                            <li><a href="works.html">作品總覽</a></li>
+                            <li><a href="about_us.html">我們是誰</a></li>
+                            <li><a href="vote.html">人氣投票</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -158,7 +158,7 @@
                     });
 
                     onMounted(async function () {
-                        await axios.get("/data.json").then((res) => {
+                        await axios.get("data.json").then((res) => {
                             works.value = res.data;
                         });
 
